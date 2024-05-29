@@ -306,8 +306,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &596162992
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +489,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Library: []
   m_SpriteLibraryAsset: {fileID: 0}
->>>>>>> 002a938140832a4304bf15da4b0ec32d53a4322d
 --- !u!1 &1730133138
 GameObject:
   m_ObjectHideFlags: 0
