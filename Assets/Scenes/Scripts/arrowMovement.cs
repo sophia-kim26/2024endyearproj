@@ -6,7 +6,7 @@ public class arrowMovement : MonoBehaviour
 {
 
     private Vector3 dir = Vector3.up;
-    private boolean speed = 1.0;
+    private float speed = 1.0f;
 
     // maybe we need to add SerializeField stuff here? idk what it actually does
 
