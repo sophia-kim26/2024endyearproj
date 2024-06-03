@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class arrowMovement : MonoBehaviour
 {
+
+    private Vector3 dir = Vector3.up;
+    private boolean speed = 1.0;
+
+    // maybe we need to add SerializeField stuff here? idk what it actually does
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +19,6 @@ public class arrowMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(dir*speed*Time.deltaTime);
     }
 }
