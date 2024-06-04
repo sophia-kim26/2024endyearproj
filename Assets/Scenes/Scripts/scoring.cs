@@ -20,7 +20,7 @@ public class arrowMovement : MonoBehaviour
         // i don't really understand this so it won't work but 
         // i think the code could work something like this??
         void OnCollisionEnter(Collision collision) {
-            debug.log(got touched by” + collision )
+            debug.log("got touched by" + collision);
             if (Input.GetKeyDown(KeyCode.UpArrow)) // and this object collided with an upArrow
             {
                 score++;
