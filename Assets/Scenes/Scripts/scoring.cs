@@ -6,6 +6,7 @@ public class arrowMovement : MonoBehaviour
 {
 
     private float score = 0f;
+    private float health = 100f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,25 +18,28 @@ public class arrowMovement : MonoBehaviour
     void Update()
     {
         void OnCollisionEnter(Collision collision) {
-            score++;
             debug.log(got touched by” + collision )
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                score++;
+            }
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                score++;
+            }
+            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                score++;
+            }
+            else if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                score++;
+            }
+            else {
+                health--;
+            }
+            
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            //weapon stuff here
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            //weapon stuff here
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            //weapon stuff here
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            //weapon stuff here
-        }
     }
 }
