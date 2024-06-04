@@ -16,6 +16,11 @@ public class arrowMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        void OnCollisionEnter(Collision collision) {
+            score++;
+            debug.log(got touched by” + collision )
+        }
+
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             //weapon stuff here
