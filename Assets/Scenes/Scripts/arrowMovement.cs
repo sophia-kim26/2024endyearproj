@@ -5,12 +5,11 @@ using UnityEngine;
 public class arrowMovement : MonoBehaviour
 {
 
-    private Vector3 dir = Vector3.up;
-    public GameObject left;
-    public GameObject right;
-    public GameObject up;
-    public GameObject down;
     private float speed = 1.0f;
+    public leftArrow left;
+    public rightArrow right;
+    public upArrow up;
+    public downArrow down;
 
     // maybe we need to add SerializeField stuff here? idk what it actually does
 
@@ -23,6 +22,6 @@ public class arrowMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(dir*speed*Time.deltaTime);
+        transform.Translate(Vector3.up*speed*Time.deltaTime);
     }
 }
