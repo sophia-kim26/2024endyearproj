@@ -21,19 +21,19 @@ public class arrowMovement : MonoBehaviour
         // i think the code could work something like this??
         void OnCollisionEnter(Collision collision) {
             debug.log(got touched by” + collision )
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyDown(KeyCode.UpArrow)) // and this object collided with an upArrow
             {
                 score++;
             }
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            else if (Input.GetKeyDown(KeyCode.DownArrow)) // and this object collided with a downArrow
             {
                 score++;
             }
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            else if (Input.GetKeyDown(KeyCode.RightArrow)) // and this object collided with a rightArrow
             {
                 score++;
             }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow))
+            else if (Input.GetKeyDown(KeyCode.LeftArrow)) // and this object collided with a leftArrow
             {
                 score++;
             }
