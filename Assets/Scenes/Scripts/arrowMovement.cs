@@ -5,7 +5,7 @@ using UnityEngine;
 public class arrowMovement : MonoBehaviour
 {
 
-    private float speed = 3.0f;
+    private float speed = 5.0f;
     private bool paused = false;
     public GameObject left;
     public GameObject right;
