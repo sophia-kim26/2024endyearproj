@@ -8,26 +8,46 @@ public class collision : MonoBehaviour
     private float score = 0f;
     private float health = 100f;
 
+    void Start() {
 
-    // i don't really understand this so it won't work but 
-    // i think the code could work something like this??
+    }
+
+    void Update() {
+        keyPressed();
+    }
+
+    void keyPressed() {
+        if (Input.GetKeyDown(KeyCode.UpArrow)) {
+            Debug.Log("Up arrow pressed");
+        }
+        else if (Input.GetKeyDown(KeyCode.downArrow)) {
+            Debug.Log("Down arrow pressed");
+        }
+        else if (Input.GetKeyDown(KeyCode.leftArrow)) {
+            Debug.Log("Left arrow pressed");
+        }
+        else if (Input.GetKeyDown(KeyCode.rightArrow)) {
+            Debug.Log("Right arrow pressed");
+        }
+    }
+
     void OnCollisionEnter(Collision collision) {
             if (Input.GetKeyDown(KeyCode.UpArrow) && collision.gameObject.name == "upArrow")
             {
                 score++;
                 Debug.Log("up arrow hit correctly");
             }
-            else if (Input.GetKeyDown(KeyCode.DownArrow) && collision.gameObject.name == "downArrow") // and this object collided with a downArrow
+            else if (Input.GetKeyDown(KeyCode.DownArrow) && collision.gameObject.name == "downArrow")
             {
                 score++;
                 Debug.Log("down arrow hit correctly");
             }
-            else if (Input.GetKeyDown(KeyCode.RightArrow) && collision.gameObject.name == "rightArrow") // and this object collided with a rightArrow
+            else if (Input.GetKeyDown(KeyCode.RightArrow) && collision.gameObject.name == "rightArrow")
             {
                 score++;
                 Debug.Log("right arrow hit correctly");
             }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow) && collision.gameObject.name == "leftArrow") // and this object collided with a leftArrow
+            else if (Input.GetKeyDown(KeyCode.LeftArrow) && collision.gameObject.name == "leftArrow")
             {
                 score++;
                 Debug.Log("left arrow hit correctly");
