@@ -19,6 +19,10 @@ public class arrowMovement : MonoBehaviour
     void Start()
     {
         buttonActionScript = FindObjectOfType<ButtonAction>();
+        if (buttonActionScript == null) {
+            Debug.LogError("ButtonAction script not found in the scene.");
+        }
+
 
         if (left == null || right == null || up == null || down == null)
         {
@@ -37,7 +41,7 @@ public class arrowMovement : MonoBehaviour
     {
         paused = buttonActionScript.paused;
         Debug.Log("Paused: " + paused);
-        
+
         if (!paused)
         {
             if (left != null) left.transform.Translate(Vector3.up * speed * Time.deltaTime);
