@@ -6,10 +6,10 @@ public class arrowMovement : MonoBehaviour
 {
 
     private float speed = 1.0f;
-    public leftArrow left;
-    public rightArrow right;
-    public upArrow up;
-    public downArrow down;
+    public GameObject left;
+    public GameObject right;
+    public GameObject up;
+    public GameObject down;
 
     // maybe we need to add SerializeField stuff here? idk what it actually does
 
