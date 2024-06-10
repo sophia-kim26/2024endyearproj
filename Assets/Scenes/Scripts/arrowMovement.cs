@@ -5,23 +5,43 @@ using UnityEngine;
 public class arrowMovement : MonoBehaviour
 {
 
-    private float speed = 1.0f;
-    public leftArrow left;
-    public rightArrow right;
-    public upArrow up;
-    public downArrow down;
+    private float speed = 2.0f;
+    private bool paused = false;
+    public GameObject left;
+    public GameObject right;
+    public GameObject up;
+    public GameObject down;
+    private ButtonAction buttonActionScript;
 
     // maybe we need to add SerializeField stuff here? idk what it actually does
 
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(left, new Vector3(0, -1, 0), Quaternion.identity);
+        if (left == null || right == null || up == null || down == null)
+        {
+            Debug.LogError("Please assign all arrow GameObjects in the Inspector.");
+        }
+
+        // Debug.Log("test log in arrowMovement");
+        paused = false;
+
+        buttonActionScript = FindObjectOfType<ButtonAction>();
+        // Instantiate(left, new Vector3(0, -1, 0), Quaternion.identity);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.up*speed*Time.deltaTime);
+        paused = buttonActionScript.paused;
+        Debug.Log(paused);
+        if (!paused)
+        {
+            if (left != null) left.transform.Translate(Vector3.up * speed * Time.deltaTime);
+            if (right != null) right.transform.Translate(Vector3.up * speed * Time.deltaTime);
+            if (up != null) up.transform.Translate(Vector3.up * speed * Time.deltaTime);
+            if (down != null) down.transform.Translate(Vector3.up * speed * Time.deltaTime);
+        }    
     }
 }

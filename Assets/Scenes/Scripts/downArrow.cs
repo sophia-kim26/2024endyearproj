@@ -10,8 +10,8 @@ public class downArrow : Arrow
     // Start is called before the first frame update
     void Start()
     {
-        left = new Arrow("l");
-        print(left.get_name());
+        // left = new Arrow("l");
+        // print(left.get_name());
     }
 
     // Update is called once per frame
