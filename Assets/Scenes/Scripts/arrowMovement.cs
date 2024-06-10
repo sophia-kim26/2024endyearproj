@@ -16,7 +16,9 @@ public class arrowMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // sorry i had to comment this out to get rid of the compile error
         // Instantiate(left, new Vector3(0, -1, 0), Quaternion.identity);
+        Debug.Log("test log in arrowMovement");
     }
 
     // Update is called once per frame
