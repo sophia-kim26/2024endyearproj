@@ -201,20 +201,26 @@ public class Conductor : MonoBehaviour
         return songPositionInBeats;
     }
 
-    public List<MidiNote> GetMidiNotes(NoteType type)
+    public List<MidiNote> GetMidiNotes(ArrowType type)
     {
-        if (type == NoteType.TREBLE)
-            return trebleMidiNotes;
-        else if (type == NoteType.BASS)
-            return bassMidiNotes;
-        Debug.LogError("Error: Conductor.cs GetMidiNotes() invalid NoteType");
+        if (type == ArrowType.UPARROW)
+            return upMidiNotes;
+        else if (type == ArrowType.DOWNARROW)
+            return downMidiNotes;
+        else if (type == ArrowType.RIGHTARROW)
+            return rightMidiNotes;
+        else if (type == ArrowType.LEFTARROW)
+            return leftMidiNotes;
+        Debug.LogError("Error: Conductor.cs GetMidiNotes() invalid ArrowTYpe");
         return new List<MidiNote>();
     }
 
-    public void SetMidiNotes(List<MidiNote> newTrebleList, List<MidiNote> newBassList)
+    public void SetMidiNotes(List<MidiNote> newUpList, List<MidiNote> newDownList, List<MidiNote> newRightList, List<MidiNote> newLeftList)
     {
-        trebleMidiNotes = newTrebleList;
-        bassMidiNotes = newBassList;
+        upMidiNotes = newUpList;
+        downMidiNotes = newDownList;
+        rightMidiNotes = newRightList;
+        leftMidiNotes = newLeftList;
     }
 
     public float GetTicksPerQuarterNote()

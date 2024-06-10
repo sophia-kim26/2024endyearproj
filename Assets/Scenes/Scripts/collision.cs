@@ -84,7 +84,7 @@ public class Collision : MonoBehaviour
     /// </summary>
     IEnumerator Hitting()
     {
-        UpdateHitColor();
+        // UpdateHitColor();
         yield return new WaitForSeconds(0.05f);
         isHitting = false;
         killable = false;
@@ -92,13 +92,13 @@ public class Collision : MonoBehaviour
     }
 
     // not used
-    public void UpdateHitColor()
-    {
-        if (isHitting)
-            sprite.color = Color.blue;
-        else
-            sprite.color = Color.white;
-    }
+    // public void UpdateHitColor()
+    // {
+    //     if (isHitting)
+    //         sprite.color = Color.blue;
+    //     else
+    //         sprite.color = Color.white;
+    // }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
