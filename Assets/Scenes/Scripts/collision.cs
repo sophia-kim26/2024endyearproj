@@ -26,6 +26,7 @@ public class Collision : MonoBehaviour
     void Update() {
         // keyPressed();
         if (Input.GetKeyDown(KeyCode.UpArrow)) {
+            // WORKS!
             Debug.Log("up arrow pressed");
             isHitting = true;
             StartCoroutine(Hitting());
