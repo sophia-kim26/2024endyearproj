@@ -6,6 +6,7 @@ public class arrowMovement : MonoBehaviour
 {
 
     private float speed = 2.0f;
+    private bool paused = false;
     public GameObject left;
     public GameObject right;
     public GameObject up;
@@ -19,11 +20,26 @@ public class arrowMovement : MonoBehaviour
         // sorry i had to comment this out to get rid of the compile error
         // Instantiate(left, new Vector3(0, -1, 0), Quaternion.identity);
         Debug.Log("test log in arrowMovement");
+        paused = false;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.up*speed*Time.deltaTime);
+        Debug.Log(paused);
+        // paused = gameObject.GetComponent<ButtonAction>().paused;
+        if (paused == false) {
+            
+        }   
+        left.transform.Translate(Vector3.up*speed*Time.deltaTime);    
+        down.transform.Translate(Vector3.up*speed*Time.deltaTime);    
+        up.transform.Translate(Vector3.up*speed*Time.deltaTime);    
+        right.transform.Translate(Vector3.up*speed*Time.deltaTime);     
+    }
+
+    void Pause() {
+        if (paused == false) paused = true;
+        if (paused == true) paused = false;
     }
 }

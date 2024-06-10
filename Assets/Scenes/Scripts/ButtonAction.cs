@@ -4,9 +4,9 @@ using UnityEngine;
   
 public class ButtonAction : MonoBehaviour  
 {  
-    int n;  
+    public bool paused { get; private set; }
+    
     public void OnButtonPress(){  
-        n++;  
-        Debug.Log("Button clicked " + n + " times.");  
+        paused = !paused;
     }  
 }  
