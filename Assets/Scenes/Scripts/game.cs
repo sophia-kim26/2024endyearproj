@@ -20,21 +20,21 @@ public class game : MonoBehaviour
     IEnumerator AddArrowsWithDelay()
     {
         addLeft();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.2f);
         addDown();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.2f);
         addUp();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.2f);
         addRight();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.2f);
         addDown();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.2f);
         addUp();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.2f);
         addLeft();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.2f);
         addDown();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.2f);
     }
 
     void addLeft() {
