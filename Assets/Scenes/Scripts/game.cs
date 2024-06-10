@@ -21,14 +21,20 @@ public class game : MonoBehaviour
     {
         addLeft();
         yield return new WaitForSeconds(1f);
-        
         addDown();
         yield return new WaitForSeconds(1f);
-        
         addUp();
         yield return new WaitForSeconds(1f);
-        
         addRight();
+        yield return new WaitForSeconds(1f);
+        addDown();
+        yield return new WaitForSeconds(1f);
+        addUp();
+        yield return new WaitForSeconds(1f);
+        addLeft();
+        yield return new WaitForSeconds(1f);
+        addDown();
+        yield return new WaitForSeconds(1f);
     }
 
     void addLeft() {
