@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class scoring : MonoBehaviour
+public class leftArrowStill : ArrowStill
 {
 
     private float score = 0f;
@@ -20,7 +20,6 @@ public class scoring : MonoBehaviour
         // i don't really understand this so it won't work but 
         // i think the code could work something like this??
         void OnCollisionEnter(Collision collision) {
-            // debug.log("got touched by" + collision);
             if (Input.GetKeyDown(KeyCode.UpArrow)) // and this object collided with an upArrow
             {
                 score++;
