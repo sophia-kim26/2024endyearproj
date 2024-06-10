@@ -18,9 +18,14 @@ public class scoring : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // i don't really understand this so it won't work but 
-        // i think the code could work something like this??
-        void OnCollisionEnter(Collision collision) {
+        
+            
+    }
+
+
+    // i don't really understand this so it won't work but 
+    // i think the code could work something like this??
+    void OnCollisionEnter(Collision collision) {
             if (Input.GetKeyDown(KeyCode.UpArrow)) // and this object collided with an upArrow
             {
                 score++;
@@ -40,9 +45,6 @@ public class scoring : MonoBehaviour
             else {
                 health--;
             }
-            
-        }
-
     }
     
 }
