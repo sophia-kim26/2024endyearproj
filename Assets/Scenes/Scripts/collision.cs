@@ -25,43 +25,51 @@ public class Collision : MonoBehaviour
     void Update() {
         // keyPressed();
         if (Input.GetKeyDown(KeyCode.UpArrow)) {
+            Debug.Log("up arrow pressed");
             isHitting = true;
             StartCoroutine(Hitting());
-            // TODO
-            if (Conductor.Instance.CheckHit(NoteType.UpArrow) == true) {
+            // TODO in Conductor
+            if (Conductor.Instance.CheckHit(ArrowType.UpArrow) == true) {
                 // screenFlash.Flash();
                 killable = true;
                 currentKillingType = ArrowType.UpArrow;
+                score += 10;
             }
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+            Debug.Log("left arrow pressed");
             isHitting = true;
             StartCoroutine(Hitting());
             // TODO
-            if (Conductor.Instance.CheckHit(NoteType.LeftArrow) == true) {
+            if (Conductor.Instance.CheckHit(ArrowType.LeftArrow) == true) {
                 // screenFlash.Flash();
                 killable = true;
                 currentKillingType = ArrowType.LeftArrow;
+                score += 10;
             }
         }
         if (Input.GetKeyDown(KeyCode.RightArrow)) {
+            Debug.Log("right arrow pressed");
             isHitting = true;
             StartCoroutine(Hitting());
             // TODO
-            if (Conductor.Instance.CheckHit(NoteType.RightArrow) == true) {
+            if (Conductor.Instance.CheckHit(ArrowType.RightArrow) == true) {
                 // screenFlash.Flash();
                 killable = true;
                 currentKillingType = ArrowType.RightArrow;
+                score += 10;
             }
         }
         if (Input.GetKeyDown(KeyCode.DownArrow)) {
+            Debug.Log("down arrow pressed");
             isHitting = true;
             StartCoroutine(Hitting());
             // TODO
-            if (Conductor.Instance.CheckHit(NoteType.DownArrow) == true) {
+            if (Conductor.Instance.CheckHit(ArrowType.DownArrow) == true) {
                 // screenFlash.Flash();
                 killable = true;
                 currentKillingType = ArrowType.DownArrow;
+                score += 10;
             }
         }
         else {
