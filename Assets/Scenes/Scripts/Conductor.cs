@@ -61,7 +61,7 @@ public enum ArrowType
 /// </summary>
 public class Conductor : MonoBehaviour
 {
-    //Conductor instance
+    // Conductor instance
     public static Conductor Instance;
 
     private AudioSource musicSource;

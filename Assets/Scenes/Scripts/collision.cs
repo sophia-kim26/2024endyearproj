@@ -73,6 +73,7 @@ public class Collision : MonoBehaviour
             }
         }
         else {
+            // wrong
             isHitting = false;
             health -= 10;
         }
