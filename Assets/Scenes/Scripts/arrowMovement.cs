@@ -13,8 +13,6 @@ public class arrowMovement : MonoBehaviour
     public GameObject down;
     private ButtonAction buttonActionScript;
 
-    // maybe we need to add SerializeField stuff here? idk what it actually does
-
     // Start is called before the first frame update
     void Start()
     {
