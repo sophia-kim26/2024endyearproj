@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
+    private GameObject deathParticles;
+    private ArrowType arrowType;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +17,16 @@ public class Arrow : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Death()
+    {
+        Instantiate(deathParticles, gameObject.transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+
+    public ArrowType GetArrowType()
+    {
+        return arrowType;
     }
 }
