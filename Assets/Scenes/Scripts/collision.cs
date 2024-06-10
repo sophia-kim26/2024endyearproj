@@ -7,7 +7,7 @@ public class Collision : MonoBehaviour
 
     // private SpriteRenderer sprite;
     // [SerializeField]
-    // private ScreenFlash screenFlash;
+    private ScreenFlash screenFlash;
 
     private float score = 0f;
     private float health = 100f;
@@ -21,6 +21,8 @@ public class Collision : MonoBehaviour
         // sprite = GetComponent<SpriteRenderer>();
         isHitting = false;
         Debug.Log("in collision file");
+        screenFlash.Flash();
+
     }
 
     void Update() {
@@ -32,7 +34,7 @@ public class Collision : MonoBehaviour
             StartCoroutine(Hitting());
             // TODO in Conductor
             if (Conductor.Instance.CheckHit(ArrowType.UPARROW) == true) {
-                // screenFlash.Flash();
+                screenFlash.Flash();
                 killable = true;
                 currentKillingType = ArrowType.UPARROW;
                 score += 10;
@@ -44,7 +46,7 @@ public class Collision : MonoBehaviour
             StartCoroutine(Hitting());
             // TODO
             if (Conductor.Instance.CheckHit(ArrowType.LEFTARROW) == true) {
-                // screenFlash.Flash();
+                screenFlash.Flash();
                 killable = true;
                 currentKillingType = ArrowType.LEFTARROW;
                 score += 10;
@@ -56,7 +58,7 @@ public class Collision : MonoBehaviour
             StartCoroutine(Hitting());
             // TODO
             if (Conductor.Instance.CheckHit(ArrowType.RIGHTARROW) == true) {
-                // screenFlash.Flash();
+                screenFlash.Flash();
                 killable = true;
                 currentKillingType = ArrowType.RIGHTARROW;
                 score += 10;
@@ -68,7 +70,7 @@ public class Collision : MonoBehaviour
             StartCoroutine(Hitting());
             // TODO
             if (Conductor.Instance.CheckHit(ArrowType.DOWNARROW) == true) {
-                // screenFlash.Flash();
+                screenFlash.Flash();
                 killable = true;
                 currentKillingType = ArrowType.DOWNARROW;
                 score += 10;
