@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class scoring : MonoBehaviour
 {
@@ -41,6 +42,10 @@ public class scoring : MonoBehaviour
                 health--;
             }
             
+
+            if(health <= 0){
+                SceneManager.LoadScene("endScene");
+            }
         }
 
     }
