@@ -20,13 +20,13 @@ public class collision : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow)) {
             Debug.Log("Up arrow pressed");
         }
-        else if (Input.GetKeyDown(KeyCode.downArrow)) {
+        else if (Input.GetKeyDown(KeyCode.DownArrow)) {
             Debug.Log("Down arrow pressed");
         }
-        else if (Input.GetKeyDown(KeyCode.leftArrow)) {
+        else if (Input.GetKeyDown(KeyCode.LeftArrow)) {
             Debug.Log("Left arrow pressed");
         }
-        else if (Input.GetKeyDown(KeyCode.rightArrow)) {
+        else if (Input.GetKeyDown(KeyCode.RightArrow)) {
             Debug.Log("Right arrow pressed");
         }
     }
