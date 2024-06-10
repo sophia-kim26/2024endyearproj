@@ -8,5 +8,6 @@ public class ButtonAction : MonoBehaviour
     
     public void OnButtonPress(){  
         paused = !paused;
+        //Debug.Log(paused);
     }  
 }  
