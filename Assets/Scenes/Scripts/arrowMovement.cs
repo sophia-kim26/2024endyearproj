@@ -5,7 +5,7 @@ using UnityEngine;
 public class arrowMovement : MonoBehaviour
 {
 
-    private float speed = 2.0f;
+    private float speed = 3.0f;
     private bool paused = false;
     public GameObject left;
     public GameObject right;
@@ -18,6 +18,8 @@ public class arrowMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        buttonActionScript = FindObjectOfType<ButtonAction>();
+
         if (left == null || right == null || up == null || down == null)
         {
             Debug.LogError("Please assign all arrow GameObjects in the Inspector.");
@@ -26,7 +28,6 @@ public class arrowMovement : MonoBehaviour
         // Debug.Log("test log in arrowMovement");
         paused = false;
 
-        buttonActionScript = FindObjectOfType<ButtonAction>();
         // Instantiate(left, new Vector3(0, -1, 0), Quaternion.identity);
         
     }
@@ -35,7 +36,8 @@ public class arrowMovement : MonoBehaviour
     void Update()
     {
         paused = buttonActionScript.paused;
-        Debug.Log(paused);
+        Debug.Log("Paused: " + paused);
+        
         if (!paused)
         {
             if (left != null) left.transform.Translate(Vector3.up * speed * Time.deltaTime);
