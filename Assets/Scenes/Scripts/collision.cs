@@ -2,33 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class scoring : MonoBehaviour
+public class collision : MonoBehaviour
 {
 
     private float score = 0f;
     private float health = 100f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        // idk what this code does but im adding this here so i dont get compilation errors so i can run the code -juna
-        onCollisionEnter();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-            
-    }
-
 
     // i don't really understand this so it won't work but 
     // i think the code could work something like this??
     void OnCollisionEnter(Collision collision) {
-            if (Input.GetKeyDown(KeyCode.UpArrow)) // and this object collided with an upArrow
+            if (Input.GetKeyDown(KeyCode.UpArrow) && collision.gameObject.name == "upArrow")
             {
                 score++;
+                Debug.Log("up arrow hit correctly");
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow)) // and this object collided with a downArrow
             {
