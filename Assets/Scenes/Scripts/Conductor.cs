@@ -6,20 +6,20 @@ using UnityEngine.Assertions;
 
 public struct MidiNote
 {
-    // public int Bar;
-    // public int Beat;
-    // public int Tick;
-    // public float Position;
-    // public float Length;
+    public int Bar;
+    public int Beat;
+    public int Tick;
+    public float Position;
+    public float Length;
 
-    // public MidiNote(int bar, int beat, int tick, float notePosition, float length)
-    // {
-    //     Bar = bar;
-    //     Beat = beat;
-    //     Tick = tick;
-    //     Position = notePosition;
-    //     Length = length;
-    // }
+    public MidiNote(int bar, int beat, int tick, float notePosition, float length)
+    {
+        Bar = bar;
+        Beat = beat;
+        Tick = tick;
+        Position = notePosition;
+        Length = length;
+    }
 }
 
 // public struct TimeSig
@@ -227,15 +227,15 @@ public class Conductor : MonoBehaviour
         ticksperQuarterNote = newTicksperQuarterNote;
     }
 
-    public TimeSig GetTimeSig()
-    {
-        return timeSig;
-    }
+    // public TimeSig GetTimeSig()
+    // {
+    //     return timeSig;
+    // }
 
-    public void SetTimeSig(TimeSig newTimeSig)
-    {
-        timeSig = newTimeSig;
-    }
+    // public void SetTimeSig(TimeSig newTimeSig)
+    // {
+    //     timeSig = newTimeSig;
+    // }
 
     public float GetFinalBeat()
     {
