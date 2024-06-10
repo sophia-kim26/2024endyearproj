@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class leftArrowStill : ArrowStill
+public class scoring : MonoBehaviour
 {
 
     private float score = 0f;
