@@ -11,7 +11,8 @@ public class scoring : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // idk what this code does but im adding this here so i dont get compilation errors so i can run the code -juna
+        onCollisionEnter();
     }
 
     // Update is called once per frame
