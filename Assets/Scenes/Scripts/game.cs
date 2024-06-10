@@ -15,15 +15,20 @@ public class game : MonoBehaviour
     void Start()
     {
         StartCoroutine(AddArrowsWithDelay());
+    }
+
+    IEnumerator AddArrowsWithDelay()
+    {
         addLeft();
-        Thread.Sleep(1000);
+        yield return new WaitForSeconds(1f);
+        
         addDown();
-        Thread.Sleep(1000);
+        yield return new WaitForSeconds(1f);
+        
         addUp();
-        Thread.Sleep(1000);
+        yield return new WaitForSeconds(1f);
+        
         addRight();
-        Thread.Sleep(1000);
-    
     }
 
     void addLeft() {
