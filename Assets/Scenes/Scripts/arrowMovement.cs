@@ -38,7 +38,7 @@ public class arrowMovement : MonoBehaviour
     void Update()
     {
         paused = buttonActionScript.paused;
-        Debug.Log("Paused: " + paused);
+        // Debug.Log("Paused: " + paused);
 
         if (!paused)
         {

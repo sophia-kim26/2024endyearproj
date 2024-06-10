@@ -20,6 +20,7 @@ public class Collision : MonoBehaviour
     void Start() {
         // sprite = GetComponent<SpriteRenderer>();
         isHitting = false;
+        Debug.Log("in collision file");
     }
 
     void Update() {
