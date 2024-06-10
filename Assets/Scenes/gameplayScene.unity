@@ -220,6 +220,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7aed424a33ed4fc6bf71416eea31ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  left: {fileID: 0}
+  right: {fileID: 0}
+  up: {fileID: 0}
+  down: {fileID: 0}
 --- !u!1 &174882021
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,6 +254,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7aed424a33ed4fc6bf71416eea31ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  left: {fileID: 0}
+  right: {fileID: 0}
+  up: {fileID: 0}
+  down: {fileID: 0}
 --- !u!212 &174882023
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -347,6 +355,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7aed424a33ed4fc6bf71416eea31ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  left: {fileID: 0}
+  right: {fileID: 0}
+  up: {fileID: 0}
+  down: {fileID: 0}
 --- !u!212 &186546194
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -425,6 +437,7 @@ GameObject:
   - component: {fileID: 327456547}
   - component: {fileID: 327456546}
   - component: {fileID: 327456548}
+  - component: {fileID: 327456549}
   m_Layer: 0
   m_Name: leftArrowStill
   m_TagString: Untagged
@@ -525,6 +538,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 3.74}
   m_EdgeRadius: 0
+--- !u!114 &327456549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327456545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d39066554ae4a1b80d1673b015b130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,6 +832,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7aed424a33ed4fc6bf71416eea31ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  left: {fileID: 0}
+  right: {fileID: 0}
+  up: {fileID: 0}
+  down: {fileID: 0}
 --- !u!212 &997843252
 SpriteRenderer:
   m_ObjectHideFlags: 0

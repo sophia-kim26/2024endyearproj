@@ -17,17 +17,20 @@ public class collision : MonoBehaviour
                 score++;
                 Debug.Log("up arrow hit correctly");
             }
-            else if (Input.GetKeyDown(KeyCode.DownArrow)) // and this object collided with a downArrow
+            else if (Input.GetKeyDown(KeyCode.DownArrow) && collision.gameObject.name == "downArrow") // and this object collided with a downArrow
             {
                 score++;
+                Debug.Log("down arrow hit correctly");
             }
-            else if (Input.GetKeyDown(KeyCode.RightArrow)) // and this object collided with a rightArrow
+            else if (Input.GetKeyDown(KeyCode.RightArrow) && collision.gameObject.name == "rightArrow") // and this object collided with a rightArrow
             {
                 score++;
+                Debug.Log("right arrow hit correctly");
             }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow)) // and this object collided with a leftArrow
+            else if (Input.GetKeyDown(KeyCode.LeftArrow) && collision.gameObject.name == "leftArrow") // and this object collided with a leftArrow
             {
                 score++;
+                Debug.Log("left arrow hit correctly");
             }
             else {
                 health--;
