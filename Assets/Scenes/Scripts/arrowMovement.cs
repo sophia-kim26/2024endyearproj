@@ -12,6 +12,7 @@ public class arrowMovement : MonoBehaviour
     public GameObject up;
     public GameObject down;
     private ButtonAction buttonActionScript;
+    Vector3 direction = Vector3.up;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,6 @@ public class arrowMovement : MonoBehaviour
 
         // Debug.Log("test log in arrowMovement");
         paused = false;
-
         // Instantiate(left, new Vector3(0, -1, 0), Quaternion.identity);
         
     }
@@ -40,12 +40,12 @@ public class arrowMovement : MonoBehaviour
         paused = buttonActionScript.paused;
         Debug.Log("Paused: " + paused);
 
-        if (!paused)
-        {
-            if (left != null) left.transform.Translate(Vector3.up * speed * Time.deltaTime);
-            if (right != null) right.transform.Translate(Vector3.up * speed * Time.deltaTime);
-            if (up != null) up.transform.Translate(Vector3.up * speed * Time.deltaTime);
-            if (down != null) down.transform.Translate(Vector3.up * speed * Time.deltaTime);
-        }    
+        direction = Vector3.up;
+        if (paused) direction = Vector3.zero;
+
+        if (left != null) left.transform.Translate(direction * speed * Time.deltaTime);
+        if (right != null) right.transform.Translate(direction * speed * Time.deltaTime);
+        if (up != null) up.transform.Translate(direction * speed * Time.deltaTime);
+        if (down != null) down.transform.Translate(direction * speed * Time.deltaTime);  
     }
 }
