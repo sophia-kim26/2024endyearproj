@@ -29,10 +29,10 @@ public class Collision : MonoBehaviour
             isHitting = true;
             StartCoroutine(Hitting());
             // TODO in Conductor
-            if (Conductor.Instance.CheckHit(ArrowType.UpArrow) == true) {
+            if (Conductor.Instance.CheckHit(ArrowType.UPARROW) == true) {
                 // screenFlash.Flash();
                 killable = true;
-                currentKillingType = ArrowType.UpArrow;
+                currentKillingType = ArrowType.UPARROW;
                 score += 10;
             }
         }
@@ -41,10 +41,10 @@ public class Collision : MonoBehaviour
             isHitting = true;
             StartCoroutine(Hitting());
             // TODO
-            if (Conductor.Instance.CheckHit(ArrowType.LeftArrow) == true) {
+            if (Conductor.Instance.CheckHit(ArrowType.LEFTARROW) == true) {
                 // screenFlash.Flash();
                 killable = true;
-                currentKillingType = ArrowType.LeftArrow;
+                currentKillingType = ArrowType.LEFTARROW;
                 score += 10;
             }
         }
@@ -53,10 +53,10 @@ public class Collision : MonoBehaviour
             isHitting = true;
             StartCoroutine(Hitting());
             // TODO
-            if (Conductor.Instance.CheckHit(ArrowType.RightArrow) == true) {
+            if (Conductor.Instance.CheckHit(ArrowType.RIGHTARROW) == true) {
                 // screenFlash.Flash();
                 killable = true;
-                currentKillingType = ArrowType.RightArrow;
+                currentKillingType = ArrowType.RIGHTARROW;
                 score += 10;
             }
         }
@@ -65,10 +65,10 @@ public class Collision : MonoBehaviour
             isHitting = true;
             StartCoroutine(Hitting());
             // TODO
-            if (Conductor.Instance.CheckHit(ArrowType.DownArrow) == true) {
+            if (Conductor.Instance.CheckHit(ArrowType.DOWNARROW) == true) {
                 // screenFlash.Flash();
                 killable = true;
-                currentKillingType = ArrowType.DownArrow;
+                currentKillingType = ArrowType.DOWNARROW;
                 score += 10;
             }
         }
@@ -103,7 +103,7 @@ public class Collision : MonoBehaviour
     {
         if (killable)
         {
-            if (currentKillingType == collision.GetComponent<Arrow>().GetNoteType())
+            if (currentKillingType == collision.GetComponent<Arrow>().GetArrowType())
                 collision.GetComponent<Arrow>().Death();
         }
     }
