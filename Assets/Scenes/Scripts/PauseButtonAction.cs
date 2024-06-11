@@ -1,7 +1,6 @@
 using System.Collections;  
 using System.Collections.Generic;  
 using UnityEngine;  
-using UnityEngine.SceneManagement;
   
 public class PauseButtonAction : MonoBehaviour  
 {  
@@ -9,7 +8,6 @@ public class PauseButtonAction : MonoBehaviour
     
     public void OnButtonPress(){  
         paused = !paused;
-        SceneManager.LoadScene("pause");
         Debug.Log("Paused: " + paused);
 
         // Get all GameObjects with the arrowMovement script attached
