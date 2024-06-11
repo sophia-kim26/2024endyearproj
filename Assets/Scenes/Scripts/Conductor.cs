@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
-using List;
 
 public struct MidiNote
 {
@@ -155,7 +154,7 @@ public class Conductor : MonoBehaviour
             // works
             Debug.Log("in if statement");
             midiNotes = upMidiNotes;
-            // ??
+            // does not work
             Debug.Log("length of midiNotes: ");
         }
         else if (type == ArrowType.DOWNARROW)

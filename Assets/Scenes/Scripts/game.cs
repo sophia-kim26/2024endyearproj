@@ -141,7 +141,7 @@ public class game : MonoBehaviour
         addRight(-216);
         addUp(-217);
 
-        SceneManager.LoadScene("end");
+        // SceneManager.LoadScene("end");
     }
 
     void addLeft(float y) {
