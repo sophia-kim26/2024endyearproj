@@ -24,10 +24,10 @@ public class game : MonoBehaviour
         addRight(3.36f-(3.36f-(-16.8f)/5f*7f));
 
         // baDaDaDa
-        addRight(3.36f-(3.36f-(-27.5f)/5f*7f)-1f);
-        addLeft(3.36f-(3.36f-(-28f)/5f*7f)-1f);
-        addRight(3.36f-(3.36f-(-28.5f)/5f*7f)-1f);
-        addLeft(3.36f-(3.36f-(-29f)/5f*7f)-1f);
+        addRight(3.36f-(3.36f-(-27.5f)/5f*7f)-3f);
+        addLeft(3.36f-(3.36f-(-28f)/5f*7f)-3f);
+        addRight(3.36f-(3.36f-(-28.5f)/5f*7f)-3f);
+        addLeft(3.36f-(3.36f-(-29f)/5f*7f)-3f);
 
         // badadada
         // badadada!!
@@ -37,80 +37,80 @@ public class game : MonoBehaviour
         addRight(3.36f-(3.36f-(-36f)/5f*7f)-1f);
 
         // baDaDaDa
-        addLeft(3.36f-(3.36f-(-41.5f)/5f*7f));
-        addRight(3.36f-(3.36f-(-42f)/5f*7f));
-        addLeft(3.36f-(3.36f-(-42.5f)/5f*7f));
-        addRight(3.36f-(3.36f-(-43f)/5f*7f));
+        addLeft(3.36f-(3.36f-(-41.5f)/5f*7f)-1f);
+        addRight(3.36f-(3.36f-(-42f)/5f*7f)-1f);
+        addLeft(3.36f-(3.36f-(-42.5f)/5f*7f)-1f);
+        addRight(3.36f-(3.36f-(-43f)/5f*7f)-1f);
 
         // badadada
         // badadada!!
-        addLeft(-64.5f);
-        addDown(-65.2f);
-        addUp(-65.9f);
-        addRight(-66.6f);
+        addLeft(-64.5f-1f);
+        addDown(-65.2f-1f);
+        addUp(-65.9f-1f);
+        addRight(-66.6f-1f);
 
         // dadadodum
-        addUp(-71.5f);
-        addRight(-72.2f);
-        addUp(-72.9f);
-        addRight(-73.6f);
+        addUp(-71.5f-1f);
+        addRight(-72.2f-1f);
+        addUp(-72.9f-1f);
+        addRight(-73.6f-1f);
 
         // adadadodumm
-        addLeft(-78.5f+7f);
-        addUp(-79.2f+7f);
-        addLeft(-79.9f+7f);
-        addUp(-80.6f+7f);
-        addLeft(-81.3f+7f);
+        addLeft(-78.5f);
+        addUp(-79.2f);
+        addLeft(-79.9f);
+        addUp(-80.6f);
+        addLeft(-81.3f);
 
         // adadadodummm
-        addRight(-85.4f+8f);
-        addDown(-86.1f+8f);
-        addRight(-86.8f+8f);
-        addDown(-87.5f+8f);
-        addRight(-88.2f+8f);
+        addRight(-85.4f);
+        addDown(-86.1f);
+        addRight(-86.8f);
+        addDown(-87.5f );
+        addRight(-88.2f );
 
         // DA
-        addLeft(-93.9f+8f);
+        addLeft(-93.9f );
 
         // DUMMMM
-        addRight(-98.5f+8f);
+        addRight(-98.5f );
 
         // badadadumm
-        addLeft(-111.5f+8f);
-        addUp(-112.2f+8f);
-        addLeft(-112.9f+8f);
-        addUp(-113.6f+8f);
+        addLeft(-111.5f-4f);
+        addUp(-112.2f-4f);
+        addLeft(-112.9f-4f);
+        addUp(-113.6f-4f);
 
         // theres a whole build up here that im too lazy to do
 
-        addDown(-125f);
-        addDown(-126f);
-        addDown(-127f);
-        addRight(-128f);
+        addDown(-125f-8f);
+        addDown(-126f-8f);
+        addDown(-127f-8f);
+        addRight(-128f-8f);
 
-        addUp(-140f);
-        addUp(-141f);
-        addUp(-142f);
-        addLeft(-143f);
+        addUp(-140f-8f);
+        addUp(-141f-8f);
+        addUp(-142f-8f);
+        addLeft(-143f--80.6ff);
 
-        addDown(-157f);
-        addDown(-158f);
-        addDown(-159f);
-        addUp(-160f);
-        addRight(-161f);
+        addDown(-157f-5f);
+        addDown(-158f-5f);
+        addDown(-159f-5f);
+        addUp(-160f-5f);
+        addRight(-161f-5f);
 
-        addUp(-166f);
-        addUp(-167f);
-        addUp(-168f);
-        addDown(-169f);
-        addLeft(-170f);
+        addUp(-166f-5f);
+        addUp(-167f-5f);
+        addUp(-168f-5f);
+        addDown(-169f-5f);
+        addLeft(-170f-5f);
 
 
         // dA dA dA dA dUM
-        addLeft(-211.5f+8f);
-        addRight(-212.2f+8f);
-        addLeft(-212.9f+8f);
-        addRight(-213.6f+8f);
+        addLeft(-211.5f-5f);
+        addRight(-212.2f-5f);
+        addLeft(-212.9f-5f);
+        addRight(-213.6f-5f);
     }
 
     void addLeft(float y) {
