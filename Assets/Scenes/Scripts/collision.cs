@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,8 @@ using UnityEngine;
 public class Collision : MonoBehaviour
 {
 
-    // private SpriteRenderer sprite;
-    // [SerializeField]
+    private SpriteRenderer sprite;
+    [SerializeField]
     private ScreenFlash screenFlash;
 
     private float score = 0f;
@@ -18,15 +19,14 @@ public class Collision : MonoBehaviour
     private ArrowType currentKillingType; // TODO
 
     void Start() {
-        // sprite = GetComponent<SpriteRenderer>();
+        sprite = GetComponent<SpriteRenderer>();
         isHitting = false;
-        Debug.Log("in collision file");
+        // Debug.Log("in collision file");
         screenFlash.Flash();
 
     }
 
     void Update() {
-        // keyPressed();
         if (Input.GetKeyDown(KeyCode.UpArrow)) {
             // WORKS!
             Debug.Log("up arrow pressed");
@@ -34,6 +34,7 @@ public class Collision : MonoBehaviour
             StartCoroutine(Hitting());
             // TODO in Conductor
             if (Conductor.Instance.CheckHit(ArrowType.UPARROW) == true) {
+                Debug.Log("up arrow hit!!");
                 screenFlash.Flash();
                 killable = true;
                 currentKillingType = ArrowType.UPARROW;
@@ -46,6 +47,7 @@ public class Collision : MonoBehaviour
             StartCoroutine(Hitting());
             // TODO
             if (Conductor.Instance.CheckHit(ArrowType.LEFTARROW) == true) {
+                Debug.Log("left arrow hit!!");
                 screenFlash.Flash();
                 killable = true;
                 currentKillingType = ArrowType.LEFTARROW;
@@ -58,6 +60,7 @@ public class Collision : MonoBehaviour
             StartCoroutine(Hitting());
             // TODO
             if (Conductor.Instance.CheckHit(ArrowType.RIGHTARROW) == true) {
+                Debug.Log("right arrow hit!!");
                 screenFlash.Flash();
                 killable = true;
                 currentKillingType = ArrowType.RIGHTARROW;
@@ -70,6 +73,7 @@ public class Collision : MonoBehaviour
             StartCoroutine(Hitting());
             // TODO
             if (Conductor.Instance.CheckHit(ArrowType.DOWNARROW) == true) {
+                Debug.Log("down arrow hit!!");
                 screenFlash.Flash();
                 killable = true;
                 currentKillingType = ArrowType.DOWNARROW;

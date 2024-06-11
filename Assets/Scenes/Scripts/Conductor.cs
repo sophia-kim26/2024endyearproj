@@ -91,7 +91,7 @@ public class Conductor : MonoBehaviour
 
     private bool hasStarted = false;
 
-    private float correctThreshold = 0.3f;
+    private float correctThreshold = 1f;
 
     void Awake()
     {
@@ -101,7 +101,7 @@ public class Conductor : MonoBehaviour
     void Start()
     {
         musicSource = GetComponent<AudioSource>();
-        // secPerBeat = 60f / songBpm;
+        secPerBeat = 60f / songBpm;
     }
 
     void Update()
@@ -145,9 +145,12 @@ public class Conductor : MonoBehaviour
 
     public bool CheckHit(ArrowType type)
     {
+        Debug.Log("in checkhit");
         var midiNotes = new List<MidiNote>();
-        if (type == ArrowType.UPARROW)
+        if (type == ArrowType.UPARROW) {
+            Debug.Log("in if statement");
             midiNotes = upMidiNotes;
+        }
         else if (type == ArrowType.DOWNARROW)
             midiNotes = downMidiNotes;
         else if (type == ArrowType.LEFTARROW)
