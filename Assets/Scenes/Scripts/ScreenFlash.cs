@@ -20,6 +20,6 @@ public class ScreenFlash : MonoBehaviour
 
     public void Flash() 
     {
-        anim.SetTrigger ("flash");
+        anim.SetTrigger("flash");
     }
 }

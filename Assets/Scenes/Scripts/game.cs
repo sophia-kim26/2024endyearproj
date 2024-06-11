@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Threading;
 using System.Threading.Tasks;
+using UnityEngine.SceneManagement;
 
 public class game : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class game : MonoBehaviour
     public GameObject downArrow;
     public GameObject upArrow;
     public GameObject rightArrow;
+    public bool gameOver = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -178,7 +180,7 @@ public class game : MonoBehaviour
         addUp(-274f);
         addRight(-274f);
 
-
+        SceneManager.LoadScene("end");
     }
 
     void addLeft(float y) {
@@ -204,6 +206,8 @@ public class game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // if(gameOver == true){
+        //     SceneManager.LoadScene("end");
+        // }
     }
 }
