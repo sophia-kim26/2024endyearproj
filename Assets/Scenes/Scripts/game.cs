@@ -81,36 +81,39 @@ public class game : MonoBehaviour
         addLeft(-112.9f-4f);
         addUp(-113.6f-4f);
 
-        // theres a whole build up here that im too lazy to do
+        addDown(-125f-15f);
+        addDown(-126f-15f);
+        addDown(-127f-15f);
+        addRight(-128f-15f);
 
-        addDown(-125f-8f);
-        addDown(-126f-8f);
-        addDown(-127f-8f);
-        addRight(-128f-8f);
+        addUp(-140f-15f);
+        addUp(-141f-15f);
+        addUp(-142f-15f);
+        addLeft(-143f-15f);
 
-        addUp(-140f-8f);
-        addUp(-141f-8f);
-        addUp(-142f-8f);
-        addLeft(-143f--80.6ff);
+        addDown(-157f-15f);
+        addDown(-158f-15f);
+        addDown(-159f-15f);
+        addUp(-161f-15f);
+        addRight(-162f-15f);
 
-        addDown(-157f-5f);
-        addDown(-158f-5f);
-        addDown(-159f-5f);
-        addUp(-160f-5f);
-        addRight(-161f-5f);
+        addUp(-180f);
+        addUp(-181f);
+        addUp(-182f);
+        addDown(-183f);
+        addLeft(-184f);
 
-        addUp(-166f-5f);
-        addUp(-167f-5f);
-        addUp(-168f-5f);
-        addDown(-169f-5f);
-        addLeft(-170f-5f);
+        addUp(-190f);
+        addRight(-190f);
 
+        addLeft(-192.7f);
+        addDown(-192.7f);
 
-        // dA dA dA dA dUM
-        addLeft(-211.5f-5f);
-        addRight(-212.2f-5f);
-        addLeft(-212.9f-5f);
-        addRight(-213.6f-5f);
+        addLeft(-195.4f);
+        addRight(-195.4f);
+
+        addUp(-198.1f);
+        addDown(-198.1f);
     }
 
     void addLeft(float y) {
