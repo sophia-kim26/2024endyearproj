@@ -19,10 +19,10 @@ public class Collision : MonoBehaviour
     private ArrowType currentKillingType; // TODO
 
     void Start() {
-        sprite = GetComponent<SpriteRenderer>();
-        isHitting = false;
-        // Debug.Log("in collision file");
-        screenFlash.Flash();
+        // sprite = GetComponent<SpriteRenderer>();
+        // isHitting = false;
+        // // Debug.Log("in collision file");
+        // screenFlash.Flash();
 
     }
 

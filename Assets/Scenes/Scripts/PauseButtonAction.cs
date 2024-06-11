@@ -9,11 +9,15 @@ public class PauseButtonAction : MonoBehaviour
     public void OnButtonPress(){  
         paused = !paused;
         Debug.Log("Paused: " + paused);
+        if (paused == true) {
+            AudioListener.pause = true;
+        }
+        else {
+            AudioListener.pause = false;
+        }
 
-        // Get all GameObjects with the arrowMovement script attached
         arrowMovement[] arrows = FindObjectsOfType<arrowMovement>();
 
-        // Pause or unpause all arrows
         foreach (arrowMovement arrow in arrows)
         {
             arrow.SetPaused(paused);
