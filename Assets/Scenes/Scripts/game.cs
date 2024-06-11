@@ -186,21 +186,29 @@ public class game : MonoBehaviour
     void addLeft(float y) {
         // TODO: figure out location
         GameObject newLeft = Instantiate(leftArrow, new Vector3(-3.04f, y, 0f), Quaternion.identity);
+        MidiNote newLeftMidi = new MidiNote(0, 0, 0, 0, 1);
+        Conductor.Instance.leftMidiNotes.Add(newLeftMidi);
     }
 
     void addDown(float y) {
         // TODO: figure out location
         GameObject newDown = Instantiate(downArrow, new Vector3(-0.88f, y, 0f), Quaternion.identity);
+        MidiNote newDownMidi = new MidiNote(0, 0, 0, 0, 1);
+        Conductor.Instance.leftMidiNotes.Add(newDownMidi);
     }
 
     void addUp(float y) {
         // TODO: figure out location
         GameObject newUp = Instantiate(upArrow, new Vector3(1.05f, y, 0f), Quaternion.identity);
+        MidiNote newUpMidi = new MidiNote(0, 0, 0, 0, 1);
+        Conductor.Instance.leftMidiNotes.Add(newUpMidi);
     }
 
     void addRight(float y) {
         // TODO: figure out location
         GameObject newRight = Instantiate(rightArrow, new Vector3(3.18f, y, 0), Quaternion.identity);
+        MidiNote newRightMidi = new MidiNote(0, 0, 0, 0, 1);
+        Conductor.Instance.leftMidiNotes.Add(newRightMidi);
     }
 
     // Update is called once per frame

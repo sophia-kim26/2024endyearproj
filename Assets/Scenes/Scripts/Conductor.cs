@@ -67,10 +67,10 @@ public class Conductor : MonoBehaviour
     private AudioSource musicSource;
 
     // Main vars with getters and setters
-    private List<MidiNote> downMidiNotes;
-    private List<MidiNote> upMidiNotes;
-    private List<MidiNote> leftMidiNotes;
-    private List<MidiNote> rightMidiNotes;
+    public List<MidiNote> downMidiNotes;
+    public List<MidiNote> upMidiNotes;
+    public List<MidiNote> leftMidiNotes;
+    public List<MidiNote> rightMidiNotes;
     private float ticksperQuarterNote;
     // private TimeSig timeSig;
     private float finalBeat;
@@ -152,17 +152,32 @@ public class Conductor : MonoBehaviour
         var midiNotes = new List<MidiNote>();
         if (type == ArrowType.UPARROW) {
             // works
-            Debug.Log("in if statement");
+            Debug.Log("in if statement for up arrow");
             midiNotes = upMidiNotes;
             // does not work
-            Debug.Log("length of midiNotes: ");
+            Debug.Log("length of midiNotes: " + midiNotes.Count);
         }
-        else if (type == ArrowType.DOWNARROW)
+        else if (type == ArrowType.DOWNARROW) {
+            // works
+            Debug.Log("in if statement for down arrow");
             midiNotes = downMidiNotes;
-        else if (type == ArrowType.LEFTARROW)
+            // does not work
+            Debug.Log("length of midiNotes: " + midiNotes.Count);
+        }
+        else if (type == ArrowType.LEFTARROW) {
+            // works
+            Debug.Log("in if statement for left arrow");
             midiNotes = leftMidiNotes;
-        else if (type == ArrowType.RIGHTARROW)
+            // does not work
+            Debug.Log("length of midiNotes: " + midiNotes.Count);
+        }
+        else if (type == ArrowType.RIGHTARROW) {
+            // works
+            Debug.Log("in if statement for right arrow");
             midiNotes = rightMidiNotes;
+            // does not work
+            Debug.Log("length of midiNotes: " + midiNotes.Count);
+        }
         else
             Debug.LogError("Error: Conductor.cs CheckHit() invalid ArrowType");
         double currentBeat = songPositionInBeats;
