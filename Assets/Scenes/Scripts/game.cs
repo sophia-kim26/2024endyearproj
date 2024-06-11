@@ -55,6 +55,7 @@ public class game : MonoBehaviour
         addUp(-72.9f-1f);
         addRight(-73.6f-1f);
 
+        // TOOD: tune
         // adadadodumm
         addLeft(-78.5f);
         addUp(-79.2f);
@@ -106,26 +107,26 @@ public class game : MonoBehaviour
         addUp(-190f);
         addRight(-190f);
 
-        addLeft(-192.7f);
-        addDown(-192.7f);
+        addLeft(-194.5f);
+        addDown(-194.5f);
 
-        addLeft(-195.4f);
-        addRight(-195.4f);
+        addLeft(-199f);
+        addRight(-199f);
 
-        addUp(-198.1f);
-        addDown(-198.1f);
-
-        addUp(-200.8f);
-        addRight(-200.8f);
-
-        addLeft(-203.5f);
+        addUp(-203.5f);
         addDown(-203.5f);
 
-        addLeft(-206.2f);
-        addRight(-206.2f);
+        // addUp(-200.8f);
+        // addRight(-200.8f);
 
-        addUp(-208.9f);
-        addDown(-208.9f);
+        // addLeft(-203.5f);
+        // addDown(-203.5f);
+
+        addLeft(-208f);
+        addRight(-208f);
+
+        addUp(-212.5f);
+        addDown(-212.5f);
 
 
         // addLeft(-202.4f);
@@ -134,10 +135,50 @@ public class game : MonoBehaviour
         // addRight(-205.4f);
         // addLeft(-206.4f);
 
-        addRight(-214);
-        addUp(-215);
-        addRight(-216);
-        addUp(-217);
+        addLeft(-214f-2f);
+        addDown(-215f-2f);
+
+        addRight(-218-2f);
+        addUp(-219f-2f);
+
+        addLeft(-222f-2f);
+        addDown(-223f-2f);
+
+        addRight(-226f-2f);
+        addUp(-227f-2f);
+
+
+        addLeft(-234);
+        addDown(-235.5f);
+        addUp(-237f);
+        addRight(-238.5f);
+
+        addLeft(-241);
+        addDown(-242.5f);
+        addUp(-244f);
+        addRight(-245.5f);
+
+
+        addLeft(-251f);
+        addDown(-252f);
+
+        addRight(-254f);
+        addUp(-255f);
+
+        addLeft(-257f);
+        addDown(-258f);
+
+        addRight(-260f);
+        addUp(-261f);
+ 
+        addUp(-265f);
+
+        addLeft(-274);
+        addDown(-274f);
+        addUp(-274f);
+        addRight(-274f);
+
+
     }
 
     void addLeft(float y) {
