@@ -18,10 +18,10 @@ public class game : MonoBehaviour
         // also in theory if we wanted to increase speed we could they would all just look like scary equations like the ones in the beginning
 
         // BUM BUM BUM BUM
-        addUp(3.36f-(3.36f-(-14.5f)/5f*7f));
-        addRight(3.36f-(3.36f-(-15.2f)/5f*7f));
-        addUp(3.36f-(3.36f-(-16f)/5f*7f));
-        addRight(3.36f-(3.36f-(-16.8f)/5f*7f));
+        addUp(3.36f-(3.36f-(-14.5f)/5f*7f)+2f);
+        addRight(3.36f-(3.36f-(-15.2f)/5f*7f)+2f);
+        addUp(3.36f-(3.36f-(-16f)/5f*7f)+2f);
+        addRight(3.36f-(3.36f-(-16.8f)/5f*7f)+2f);
 
         // baDaDaDa
         addRight(3.36f-(3.36f-(-27.5f)/5f*7f)-3f);
@@ -70,10 +70,10 @@ public class game : MonoBehaviour
         addRight(-88.2f );
 
         // DA
-        addLeft(-93.9f );
+        addLeft(-95.9f );
 
         // DUMMMM
-        addRight(-98.5f );
+        addRight(-100.5f );
 
         // badadadumm
         addLeft(-111.5f-4f);
@@ -114,6 +114,30 @@ public class game : MonoBehaviour
 
         addUp(-198.1f);
         addDown(-198.1f);
+
+        addUp(-200.8f);
+        addRight(-200.8f);
+
+        addLeft(-203.5f);
+        addDown(-203.5f);
+
+        addLeft(-206.2f);
+        addRight(-206.2f);
+
+        addUp(-208.9f);
+        addDown(-208.9f);
+
+
+        // addLeft(-202.4f);
+        // addRight(-203.4f);
+        // addLeft(-204.4f);
+        // addRight(-205.4f);
+        // addLeft(-206.4f);
+
+        addRight(-214);
+        addUp(-215);
+        addRight(-216);
+        addUp(-217);
     }
 
     void addLeft(float y) {
