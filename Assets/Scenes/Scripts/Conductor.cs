@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using List;
 
 public struct MidiNote
 {
@@ -89,7 +90,7 @@ public class Conductor : MonoBehaviour
     [SerializeField]
     private double firstBeatOffset;
 
-    private bool hasStarted = false;
+    private bool hasStarted = true;
 
     private float correctThreshold = 1f;
 
@@ -106,8 +107,10 @@ public class Conductor : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("in update");
         if (hasStarted)
         {
+            Debug.Log("in hasStarted");
             songTime += AudioSettings.dspTime - previousFrameTime - firstBeatOffset; // TODO fix firstbeatoffset
             previousFrameTime = AudioSettings.dspTime;
             if (musicSource.time != lastReportedPlayheadPosition)
@@ -116,6 +119,7 @@ public class Conductor : MonoBehaviour
                 lastReportedPlayheadPosition = musicSource.time;
             }
             songPositionInBeats = songTime / secPerBeat;
+            Debug.Log(songPositionInBeats);
         }
     }
 
@@ -148,12 +152,11 @@ public class Conductor : MonoBehaviour
         Debug.Log("in checkhit");
         var midiNotes = new List<MidiNote>();
         if (type == ArrowType.UPARROW) {
+            // works
             Debug.Log("in if statement");
             midiNotes = upMidiNotes;
-            // foreach (MidiNote note in midiNotes)
-            // {
-            //     Debug.Log(note);
-            // }
+            // ??
+            Debug.Log("length of midiNotes: ");
         }
         else if (type == ArrowType.DOWNARROW)
             midiNotes = downMidiNotes;
@@ -164,9 +167,12 @@ public class Conductor : MonoBehaviour
         else
             Debug.LogError("Error: Conductor.cs CheckHit() invalid ArrowType");
         double currentBeat = songPositionInBeats;
+        // shows up
+        Debug.Log("currentBeat: " + currentBeat);
         // it's not going inside the foreach loop
         foreach (MidiNote midiNote in midiNotes)
         {
+            // doesn't show up
             Debug.Log("in foreach loop");
             if (currentBeat > midiNote.Position + correctThreshold)
             {
