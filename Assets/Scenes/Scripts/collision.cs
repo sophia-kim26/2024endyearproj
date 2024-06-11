@@ -27,65 +27,65 @@ public class Collision : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.UpArrow)) {
-            Debug.Log("up arrow pressed");
-            // screenFlash.Flash();
-            // TODO
-            isHitting = true;
-            StartCoroutine(Hitting());
-            // TODO in Conductor
-            if (Conductor.Instance.CheckHit(ArrowType.UPARROW) == true) {
-                Debug.Log("up arrow hit!!");
-                screenFlash.Flash();
-                killable = true;
-                currentKillingType = ArrowType.UPARROW;
-                score += 10;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-            Debug.Log("left arrow pressed");
-            isHitting = true;
-            StartCoroutine(Hitting());
-            // TODO
-            if (Conductor.Instance.CheckHit(ArrowType.LEFTARROW) == true) {
-                Debug.Log("left arrow hit!!");
-                screenFlash.Flash();
-                killable = true;
-                currentKillingType = ArrowType.LEFTARROW;
-                score += 10;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow)) {
-            Debug.Log("right arrow pressed");
-            isHitting = true;
-            StartCoroutine(Hitting());
-            // TODO
-            if (Conductor.Instance.CheckHit(ArrowType.RIGHTARROW) == true) {
-                Debug.Log("right arrow hit!!");
-                screenFlash.Flash();
-                killable = true;
-                currentKillingType = ArrowType.RIGHTARROW;
-                score += 10;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow)) {
-            Debug.Log("down arrow pressed");
-            isHitting = true;
-            StartCoroutine(Hitting());
-            // TODO
-            if (Conductor.Instance.CheckHit(ArrowType.DOWNARROW) == true) {
-                Debug.Log("down arrow hit!!");
-                screenFlash.Flash();
-                killable = true;
-                currentKillingType = ArrowType.DOWNARROW;
-                score += 10;
-            }
-        }
-        else {
-            // wrong
-            isHitting = false;
-            health -= 10;
-        }
+        // if (Input.GetKeyDown(KeyCode.UpArrow)) {
+        //     Debug.Log("up arrow pressed");
+        //     // screenFlash.Flash();
+        //     // TODO
+        //     isHitting = true;
+        //     StartCoroutine(Hitting());
+        //     // TODO in Conductor
+        //     if (Conductor.Instance.CheckHit(ArrowType.UPARROW) == true) {
+        //         Debug.Log("up arrow hit!!");
+        //         screenFlash.Flash();
+        //         killable = true;
+        //         currentKillingType = ArrowType.UPARROW;
+        //         score += 10;
+        //     }
+        // }
+        // if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+        //     Debug.Log("left arrow pressed");
+        //     isHitting = true;
+        //     StartCoroutine(Hitting());
+        //     // TODO
+        //     if (Conductor.Instance.CheckHit(ArrowType.LEFTARROW) == true) {
+        //         Debug.Log("left arrow hit!!");
+        //         screenFlash.Flash();
+        //         killable = true;
+        //         currentKillingType = ArrowType.LEFTARROW;
+        //         score += 10;
+        //     }
+        // }
+        // if (Input.GetKeyDown(KeyCode.RightArrow)) {
+        //     Debug.Log("right arrow pressed");
+        //     isHitting = true;
+        //     StartCoroutine(Hitting());
+        //     // TODO
+        //     if (Conductor.Instance.CheckHit(ArrowType.RIGHTARROW) == true) {
+        //         Debug.Log("right arrow hit!!");
+        //         screenFlash.Flash();
+        //         killable = true;
+        //         currentKillingType = ArrowType.RIGHTARROW;
+        //         score += 10;
+        //     }
+        // }
+        // if (Input.GetKeyDown(KeyCode.DownArrow)) {
+        //     Debug.Log("down arrow pressed");
+        //     isHitting = true;
+        //     StartCoroutine(Hitting());
+        //     // TODO
+        //     if (Conductor.Instance.CheckHit(ArrowType.DOWNARROW) == true) {
+        //         Debug.Log("down arrow hit!!");
+        //         screenFlash.Flash();
+        //         killable = true;
+        //         currentKillingType = ArrowType.DOWNARROW;
+        //         score += 10;
+        //     }
+        // }
+        // else {
+        //     // wrong
+        //     isHitting = false;
+        //     health -= 10;
+        // }
     }
 
     /// <summary>   

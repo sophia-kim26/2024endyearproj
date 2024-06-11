@@ -100,26 +100,26 @@ public class Conductor : MonoBehaviour
 
     void Start()
     {
-        musicSource = GetComponent<AudioSource>();
-        secPerBeat = 60f / songBpm;
+        // musicSource = GetComponent<AudioSource>();
+        // secPerBeat = 60f / songBpm;
     }
 
     void Update()
     {
-        Debug.Log("in update");
-        if (hasStarted)
-        {
-            Debug.Log("in hasStarted");
-            songTime += AudioSettings.dspTime - previousFrameTime - firstBeatOffset; // TODO fix firstbeatoffset
-            previousFrameTime = AudioSettings.dspTime;
-            if (musicSource.time != lastReportedPlayheadPosition)
-            {
-                songTime = (songTime + musicSource.time) / 2;
-                lastReportedPlayheadPosition = musicSource.time;
-            }
-            songPositionInBeats = songTime / secPerBeat;
-            Debug.Log(songPositionInBeats);
-        }
+        // Debug.Log("in update");
+        // if (hasStarted)
+        // {
+        //     Debug.Log("in hasStarted");
+        //     songTime += AudioSettings.dspTime - previousFrameTime - firstBeatOffset; // TODO fix firstbeatoffset
+        //     previousFrameTime = AudioSettings.dspTime;
+        //     if (musicSource.time != lastReportedPlayheadPosition)
+        //     {
+        //         songTime = (songTime + musicSource.time) / 2;
+        //         lastReportedPlayheadPosition = musicSource.time;
+        //     }
+        //     songPositionInBeats = songTime / secPerBeat;
+        //     Debug.Log(songPositionInBeats);
+        // }
     }
 
     /// <summary>

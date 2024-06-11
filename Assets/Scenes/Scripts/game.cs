@@ -13,9 +13,14 @@ public class game : MonoBehaviour
     public GameObject upArrow;
     public GameObject rightArrow;
     public bool gameOver = false;
-    // Start is called before the first frame update
+    public List<GameObject> lefts = new List<GameObject>();
+    public List<GameObject> downs = new List<GameObject>();
+    public List<GameObject> ups = new List<GameObject>();
+    public List<GameObject> rights = new List<GameObject>();
+    // Start is called before the first frame update    
     void Start()
     {
+        Debug.Log("creating arrows");
 
         // also in theory if we wanted to increase speed we could they would all just look like scary equations like the ones in the beginning
 
@@ -180,35 +185,42 @@ public class game : MonoBehaviour
         addUp(-274f);
         addRight(-274f);
 
+        Debug.Log("# of left arrows:" + lefts.Count);
+
         // SceneManager.LoadScene("end");
     }
 
     void addLeft(float y) {
         // TODO: figure out location
         GameObject newLeft = Instantiate(leftArrow, new Vector3(-3.04f, y, 0f), Quaternion.identity);
-        MidiNote newLeftMidi = new MidiNote(0, 0, 0, 0, 1);
-        Conductor.Instance.leftMidiNotes.Add(newLeftMidi);
+        lefts.Add(newLeft);
+        
+        // MidiNote newLeftMidi = new MidiNote(0, 0, 0, 0, 1);
+        // Conductor.Instance.leftMidiNotes.Add(newLeftMidi);
     }
 
     void addDown(float y) {
         // TODO: figure out location
         GameObject newDown = Instantiate(downArrow, new Vector3(-0.88f, y, 0f), Quaternion.identity);
-        MidiNote newDownMidi = new MidiNote(0, 0, 0, 0, 1);
-        Conductor.Instance.leftMidiNotes.Add(newDownMidi);
+        downs.Add(newDown);
+        // MidiNote newDownMidi = new MidiNote(0, 0, 0, 0, 1);
+        // Conductor.Instance.leftMidiNotes.Add(newDownMidi);
     }
 
     void addUp(float y) {
         // TODO: figure out location
         GameObject newUp = Instantiate(upArrow, new Vector3(1.05f, y, 0f), Quaternion.identity);
-        MidiNote newUpMidi = new MidiNote(0, 0, 0, 0, 1);
-        Conductor.Instance.leftMidiNotes.Add(newUpMidi);
+        ups.Add(newUp);
+        // MidiNote newUpMidi = new MidiNote(0, 0, 0, 0, 1);
+        // Conductor.Instance.leftMidiNotes.Add(newUpMidi);
     }
 
     void addRight(float y) {
         // TODO: figure out location
         GameObject newRight = Instantiate(rightArrow, new Vector3(3.18f, y, 0), Quaternion.identity);
-        MidiNote newRightMidi = new MidiNote(0, 0, 0, 0, 1);
-        Conductor.Instance.leftMidiNotes.Add(newRightMidi);
+        rights.Add(newRight);
+        // MidiNote newRightMidi = new MidiNote(0, 0, 0, 0, 1);
+        // Conductor.Instance.leftMidiNotes.Add(newRightMidi);
     }
 
     // Update is called once per frame
