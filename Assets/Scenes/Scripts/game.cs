@@ -231,25 +231,28 @@ public class game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow)) {
-            Debug.Log("up arrow pressed");
+        if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+            Debug.Log("left arrow pressed");
             
             GameObject targetArrow = null;
-            int targetArrowi = -1;
+            int  targetArrowIndex = -1;
             for (int i = 0; i < lefts.Count; i++) {
-                float arrowY = lefts[i].transform.position.y;
-                // if the arrow is in the valid hit area
-                if (arrowY > 2.8f && arrowY < 5.0f) { 
-                    // if there's no current target arrow to compare it to make it the target arrow
-                    if (targetArrow == null) {
-                        targetArrow = lefts[i];
-                        targetArrowi = i;
-                    }
-                    else {
-                        // if this arrow is closer than target arrow make this target arrow
-                        if (Mathf.Abs(arrowY-3.36) < Math.Abs(targetArrow.transform.position.y()-3.36)) {
+
+                if (lefts[i] != null) {
+                    float arrowY = lefts[i].transform.position.y;
+                    // if the arrow is in the valid hit area
+                    if (arrowY > 2.8f && arrowY < 5.0f) { 
+                        // if there's no current target arrow to compare it to make it the target arrow
+                        if (targetArrow == null) {
                             targetArrow = lefts[i];
-                            targetArrowi = i;
+                             targetArrowIndex = i;
+                        }
+                        else {
+                            // if this arrow is closer than target arrow make this target arrow
+                            if (Mathf.Abs(arrowY-3.36f) < Mathf.Abs(targetArrow.transform.position.y - 3.36f)) {
+                                targetArrow = lefts[i];
+                                 targetArrowIndex = i;
+                            }
                         }
                     }
                 }
@@ -258,8 +261,8 @@ public class game : MonoBehaviour
 
             if (targetArrow != null) {
                 // if they missed any arrows
-                if (leftHits.Count+1 < targetArrowi) {
-                    for (int i = leftHits.Count+1; i < targetArrowi; i++) {
+                if (leftHits.Count+1 <  targetArrowIndex) {
+                    for (int i = leftHits.Count+1; i <  targetArrowIndex; i++) {
                         leftHits.Add("missed");
                     }
                 }
@@ -269,14 +272,16 @@ public class game : MonoBehaviour
                 // perfect!
                 if (Mathf.Abs(targetArrowY-3.36f) < 0.40f) {
                     leftHits.Add("perfect");
-                    targetArrow.GetComponent<SpriteRenderer>().enabled = false;
+                    Destroy(targetArrow);
                 }
 
                 // good!
-                else if (Math.Abs(targetArrowY-3.36f) < 0.75f) {
+                else if (Mathf.Abs(targetArrowY-3.36f) < 0.75f) {
                     leftHits.Add("good");
-                    targetArrow.GetComponent<SpriteRenderer>().enabled = false;
+                    Destroy(targetArrow);
                 }
+
+                lefts[ targetArrowIndex] = null;
             }
 
             // if (Conductor.Instance.CheckHit(ArrowType.UPARROW) == true) {
