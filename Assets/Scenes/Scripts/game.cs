@@ -18,16 +18,16 @@ public class game : MonoBehaviour
         // also in theory if we wanted to increase speed we could they would all just look like scary equations like the ones in the beginning
 
         // BUM BUM BUM BUM
-        addUp(3.36f-(3.36f-(-10.5f)/5f*7f)+5f);
-        addRight(3.36f-(3.36f-(-11.5f)/5f*7f)+5f);
-        addUp(3.36f-(3.36f-(-12.5f)/5f*7f)+5f);
-        addRight(3.36f-(3.36f-(-13.5f)/5f*7f)+5f);
+        addUp(3.36f-(3.36f-(-7.5f)/5f*7f));
+        addRight(3.36f-(3.36f-(-8.5f)/5f*7f));
+        addUp(3.36f-(3.36f-(-8.5f)/5f*7f));
+        addRight(3.36f-(3.36f-(-9.5f)/5f*7f));
 
         // baDaDaDa
-        addRight(3.36f-(3.36f-(-27.5f)/5f*7f)+6f);
-        addLeft(3.36f-(3.36f-(-28f)/5f*7f)+6f);
-        addRight(3.36f-(3.36f-(-28.5f)/5f*7f)+6f);
-        addLeft(3.36f-(3.36f-(-29f)/5f*7f)+6f);
+        addRight(3.36f-(3.36f-(-27.5f)/5f*7f)+8f);
+        addLeft(3.36f-(3.36f-(-28f)/5f*7f)+8f);
+        addRight(3.36f-(3.36f-(-28.5f)/5f*7f)+8f);
+        addLeft(3.36f-(3.36f-(-29f)/5f*7f)+8f);
 
         // badadada
         // badadada!!
@@ -63,31 +63,31 @@ public class game : MonoBehaviour
         addLeft(-81.3f+8f);
 
         // adadadodummm
-        addRight(-85.4f);
-        addDown(-86.1f);
-        addRight(-86.8f);
-        addDown(-87.5f);
-        addRight(-88.2f);
+        addRight(-85.4f+8f);
+        addDown(-86.1f+8f);
+        addRight(-86.8f+8f);
+        addDown(-87.5f+8f);
+        addRight(-88.2f+8f);
 
         // DA
-        addLeft(-93.9f);
+        addLeft(-93.9f+8f);
 
         // DUMMMM
-        addRight(-98.5f);
+        addRight(-98.5f+8f);
 
         // badadadumm
-        addLeft(-111.5f);
-        addUp(-112.2f);
-        addLeft(-112.9f);
-        addUp(-113.6f);
+        addLeft(-111.5f+8f);
+        addUp(-112.2f+8f);
+        addLeft(-112.9f+8f);
+        addUp(-113.6f+8f);
 
         // theres a whole build up here that im too lazy to do
 
         // dA dA dA dA dUM
-        addLeft(-211.5f);
-        addRight(-212.2f);
-        addLeft(-212.9f);
-        addRight(-213.6f);
+        addLeft(-211.5f+8f);
+        addRight(-212.2f+8f);
+        addLeft(-212.9f+8f);
+        addRight(-213.6f+8f);
     }
 
     void addLeft(float y) {
