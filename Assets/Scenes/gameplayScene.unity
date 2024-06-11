@@ -860,6 +860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d39066554ae4a1b80d1673b015b130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  screenFlash: {fileID: 0}
 --- !u!114 &327456550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1171,6 +1172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d39066554ae4a1b80d1673b015b130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  screenFlash: {fileID: 0}
 --- !u!1 &931026012
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,7 +1908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e27cf6693c2c470fa1e6e52b4cf349d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  songBpm: 0
+  songBpm: 120
   firstBeatOffset: 0
 --- !u!114 &2136813067
 MonoBehaviour:
