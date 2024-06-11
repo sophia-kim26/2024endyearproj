@@ -18,42 +18,42 @@ public class game : MonoBehaviour
         // also in theory if we wanted to increase speed we could they would all just look like scary equations like the ones in the beginning
 
         // BUM BUM BUM BUM
-        addUp(3.36f-(3.36f-(-7.5f)/5f*7f)+3f);
-        addRight(3.36f-(3.36f-(-8.5f)/5f*7f)+3f);
-        addUp(3.36f-(3.36f-(-8.5f)/5f*7f)+3f);
-        addRight(3.36f-(3.36f-(-9.5f)/5f*7f)+3f);
+        addUp(3.36f-(3.36f-(-14.5f)/5f*7f));
+        addRight(3.36f-(3.36f-(-15.2f)/5f*7f));
+        addUp(3.36f-(3.36f-(-16f)/5f*7f));
+        addRight(3.36f-(3.36f-(-16.8f)/5f*7f));
 
         // baDaDaDa
-        addRight(3.36f-(3.36f-(-27.5f)/5f*7f)+9f);
-        addLeft(3.36f-(3.36f-(-28f)/5f*7f)+9f);
-        addRight(3.36f-(3.36f-(-28.5f)/5f*7f)+9f);
-        addLeft(3.36f-(3.36f-(-29f)/5f*7f)+9f);
+        addRight(3.36f-(3.36f-(-27.5f)/5f*7f)-1f);
+        addLeft(3.36f-(3.36f-(-28f)/5f*7f)-1f);
+        addRight(3.36f-(3.36f-(-28.5f)/5f*7f)-1f);
+        addLeft(3.36f-(3.36f-(-29f)/5f*7f)-1f);
 
         // badadada
         // badadada!!
-        addLeft(3.36f-(3.36f-(-34.5f)/5f*7f)+9f);
-        addDown(3.36f-(3.36f-(-35f)/5f*7f)+9f);
-        addUp(3.36f-(3.36f-(-35.5f)/5f*7f)+9f);
-        addRight(3.36f-(3.36f-(-36f)/5f*7f)+9f);
+        addLeft(3.36f-(3.36f-(-34.5f)/5f*7f)-1f);
+        addDown(3.36f-(3.36f-(-35f)/5f*7f)-1f);
+        addUp(3.36f-(3.36f-(-35.5f)/5f*7f)-1f);
+        addRight(3.36f-(3.36f-(-36f)/5f*7f)-1f);
 
         // baDaDaDa
-        addLeft(3.36f-(3.36f-(-41.5f)/5f*7f)+9f);
-        addRight(3.36f-(3.36f-(-42f)/5f*7f)+9f);
-        addLeft(3.36f-(3.36f-(-42.5f)/5f*7f)+9f);
-        addRight(3.36f-(3.36f-(-43f)/5f*7f)+9f);
+        addLeft(3.36f-(3.36f-(-41.5f)/5f*7f));
+        addRight(3.36f-(3.36f-(-42f)/5f*7f));
+        addLeft(3.36f-(3.36f-(-42.5f)/5f*7f));
+        addRight(3.36f-(3.36f-(-43f)/5f*7f));
 
         // badadada
         // badadada!!
-        addLeft(-64.5f+9f);
-        addDown(-65.2f+9f);
-        addUp(-65.9f+9f);
-        addRight(-66.6f+9f);
+        addLeft(-64.5f);
+        addDown(-65.2f);
+        addUp(-65.9f);
+        addRight(-66.6f);
 
         // dadadodum
-        addUp(-71.5f+7f);
-        addRight(-72.2f+7f);
-        addUp(-72.9f+7f);
-        addRight(-73.6f+7f);
+        addUp(-71.5f);
+        addRight(-72.2f);
+        addUp(-72.9f);
+        addRight(-73.6f);
 
         // adadadodumm
         addLeft(-78.5f+7f);
