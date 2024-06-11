@@ -684,7 +684,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &287162786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,7 +732,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 287162783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7388fcb72adb4c1b8782f65a2165df1, type: 3}
+  m_Script: {fileID: 11500000, guid: cb8f75f4d8e5142fd82f0b5628adf20b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &327456545
@@ -860,7 +860,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d39066554ae4a1b80d1673b015b130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenFlash: {fileID: 0}
 --- !u!114 &327456550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1172,7 +1171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d39066554ae4a1b80d1673b015b130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenFlash: {fileID: 0}
 --- !u!1 &931026012
 GameObject:
   m_ObjectHideFlags: 0
