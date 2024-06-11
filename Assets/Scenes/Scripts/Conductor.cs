@@ -160,14 +160,18 @@ public class Conductor : MonoBehaviour
         else
             Debug.LogError("Error: Conductor.cs CheckHit() invalid ArrowType");
         double currentBeat = songPositionInBeats;
+        // it's not going inside the foreach loop
         foreach (MidiNote midiNote in midiNotes)
         {
+            Debug.Log("in foreach loop");
             if (currentBeat > midiNote.Position + correctThreshold)
             {
+                Debug.Log("not returning true");
                 //midiNotes.Remove (midiNote); // TODO figure out a way to remove notes after they have been passed
             }
             if (currentBeat < midiNote.Position + correctThreshold && currentBeat > midiNote.Position - correctThreshold)
             {
+                Debug.Log("returning true");
                 return true;
             }
         }

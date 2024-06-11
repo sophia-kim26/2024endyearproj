@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
+    [SerializeField]
     private GameObject deathParticles;
     private ArrowType arrowType;
+
 
     // Start is called before the first frame update
     void Start()
