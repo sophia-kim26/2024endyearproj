@@ -150,6 +150,10 @@ public class Conductor : MonoBehaviour
         if (type == ArrowType.UPARROW) {
             Debug.Log("in if statement");
             midiNotes = upMidiNotes;
+            // foreach (MidiNote note in midiNotes)
+            // {
+            //     Debug.Log(note);
+            // }
         }
         else if (type == ArrowType.DOWNARROW)
             midiNotes = downMidiNotes;
