@@ -13,10 +13,15 @@ public class Collision : MonoBehaviour
     private float score = 0f;
     private float health = 100f;
 
-    private bool isHitting;
-    private bool killable;
+    // private bool isHitting;
+    // private bool killable;
 
-    private ArrowType currentKillingType; // TODO
+    private int il = 0;
+    private int id = 0;
+    private int iu = 0;
+    private int ir = 0;
+
+    // private ArrowType currentKillingType; // TODO
 
     void Start() {
         // sprite = GetComponent<SpriteRenderer>();
@@ -27,21 +32,7 @@ public class Collision : MonoBehaviour
     }
 
     void Update() {
-        // if (Input.GetKeyDown(KeyCode.UpArrow)) {
-        //     Debug.Log("up arrow pressed");
-        //     // screenFlash.Flash();
-        //     // TODO
-        //     isHitting = true;
-        //     StartCoroutine(Hitting());
-        //     // TODO in Conductor
-        //     if (Conductor.Instance.CheckHit(ArrowType.UPARROW) == true) {
-        //         Debug.Log("up arrow hit!!");
-        //         screenFlash.Flash();
-        //         killable = true;
-        //         currentKillingType = ArrowType.UPARROW;
-        //         score += 10;
-        //     }
-        // }
+        
         // if (Input.GetKeyDown(KeyCode.LeftArrow)) {
         //     Debug.Log("left arrow pressed");
         //     isHitting = true;
@@ -91,14 +82,14 @@ public class Collision : MonoBehaviour
     /// <summary>   
     /// Controls color of player on hit, and puts hitting on cooldown, so player can't spam.
     /// </summary>
-    IEnumerator Hitting()
-    {
-        // UpdateHitColor();
-        yield return new WaitForSeconds(0.05f);
-        isHitting = false;
-        killable = false;
-        // UpdateHitColor();
-    }
+    // IEnumerator Hitting()
+    // {
+    //     // UpdateHitColor();
+    //     yield return new WaitForSeconds(0.05f);
+    //     isHitting = false;
+    //     killable = false;
+    //     // UpdateHitColor();
+    // }
 
     // not used
     // public void UpdateHitColor()
@@ -109,14 +100,14 @@ public class Collision : MonoBehaviour
     //         sprite.color = Color.white;
     // }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (killable)
-        {
-            if (currentKillingType == collision.GetComponent<Arrow>().GetArrowType())
-                collision.GetComponent<Arrow>().Death();
-        }
-    }
+    // private void OnTriggerStay2D(Collider2D collision)
+    // {
+    //     if (killable)
+    //     {
+    //         if (currentKillingType == collision.GetComponent<Arrow>().GetArrowType())
+    //             collision.GetComponent<Arrow>().Death();
+    //     }
+    // }
 
     // void keyPressed() {
     //     if (Input.GetKeyDown(KeyCode.UpArrow)) {

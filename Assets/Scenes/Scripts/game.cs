@@ -14,9 +14,14 @@ public class game : MonoBehaviour
     public GameObject rightArrow;
     public bool gameOver = false;
     public List<GameObject> lefts = new List<GameObject>();
+    public List<string> leftHits = new List<string>();
     public List<GameObject> downs = new List<GameObject>();
+    public List<string> downHits = new List<string>();
     public List<GameObject> ups = new List<GameObject>();
+    public List<string> upHits = new List<string>();
     public List<GameObject> rights = new List<GameObject>();
+    public List<string> rightHits = new List<string>();
+    
     // Start is called before the first frame update    
     void Start()
     {
@@ -226,8 +231,60 @@ public class game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if(gameOver == true){
-        //     SceneManager.LoadScene("end");
-        // }
+        if (Input.GetKeyDown(KeyCode.UpArrow)) {
+            Debug.Log("up arrow pressed");
+            
+            GameObject targetArrow = null;
+            int targetArrowi = -1;
+            for (int i = 0; i < lefts.Count; i++) {
+                float arrowY = lefts[i].transform.position.y;
+                // if the arrow is in the valid hit area
+                if (arrowY > 2.8f && arrowY < 5.0f) { 
+                    // if there's no current target arrow to compare it to make it the target arrow
+                    if (targetArrow == null) {
+                        targetArrow = lefts[i];
+                        targetArrowi = i;
+                    }
+                    else {
+                        // if this arrow is closer than target arrow make this target arrow
+                        if (Mathf.Abs(arrowY-3.36) < Math.Abs(targetArrow.transform.position.y()-3.36)) {
+                            targetArrow = lefts[i];
+                            targetArrowi = i;
+                        }
+                    }
+                }
+            }
+            // so now we have our lil target arrow
+
+            if (targetArrow != null) {
+                // if they missed any arrows
+                if (leftHits.Count+1 < targetArrowi) {
+                    for (int i = leftHits.Count+1; i < targetArrowi; i++) {
+                        leftHits.Add("missed");
+                    }
+                }
+
+                float targetArrowY = targetArrow.transform.position.y;
+
+                // perfect!
+                if (Mathf.Abs(targetArrowY-3.36f) < 0.40f) {
+                    leftHits.Add("perfect");
+                    targetArrow.GetComponent<SpriteRenderer>().enabled = false;
+                }
+
+                // good!
+                else if (Math.Abs(targetArrowY-3.36f) < 0.75f) {
+                    leftHits.Add("good");
+                    targetArrow.GetComponent<SpriteRenderer>().enabled = false;
+                }
+            }
+
+            // if (Conductor.Instance.CheckHit(ArrowType.UPARROW) == true) {
+            //     Debug.Log("up arrow hit!!");
+            //     screenFlash.Flash();
+
+            //     score += 10;
+            // }
+        }
     }
 }
