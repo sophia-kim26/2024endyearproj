@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class arrowMovement : MonoBehaviour
 {
-    private float speed = 5.0f;
+    private float speed = 7.0f;
     private bool paused = false;
 
     // Update is called once per frame
