@@ -44,7 +44,7 @@ public class game : MonoBehaviour
     public Sprite score100;
 
     // add to list
-    // public List<Sprite> scoreSprites = new List<Sprite>(){score0, score10, score20, score30, score40, score50, score60, score70, score80, score90, score100};
+    public List<Sprite> scoreSprites = new List<Sprite>{score0, score10, score20, score30, score40, score50, score60, score70, score80, score90, score100};
 
     // health images
     public Image healthImage;
@@ -61,7 +61,7 @@ public class game : MonoBehaviour
     public Sprite health100;
 
     // add to list
-    // public List<Sprite> healthSprites = new List<Sprite>(){health0, health10, health20, health30, health40, health50, health60, health70, health80, health90, health100};
+    public List<Sprite> healthSprites = new List<Sprite>{health0, health10, health20, health30, health40, health50, health60, health70, health80, health90, health100};
 
     // indexes
     int scoreIndex = 0;
