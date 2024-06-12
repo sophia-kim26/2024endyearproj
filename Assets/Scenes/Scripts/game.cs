@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
 
 public class game : MonoBehaviour
 {
@@ -257,7 +258,7 @@ public class game : MonoBehaviour
     }
 
     void changeHealth(int points) {
-        // int pastHealth = points;
+        int pastHealth = points;
         if (100 - health < points) {
             health = 100;
         }
@@ -267,11 +268,16 @@ public class game : MonoBehaviour
         else {
             health += points;
         }
-        // int changes = (health / 10) - (pastHealth - 10);
-        // this is the code for changing the image
-        // for (int i = 0; i < changes; i++) {
-        //     Image.GetComponent<Image>().sprite = newImage;
-        // }
+        int changes = (health / 10) - (pastHealth - 10);
+        for (int i = 0; i < Math.Abs(changes); i++) {
+            if (changes < 0) {
+                healthIndex--;
+            }
+            else {
+                healthIndex++;
+            }
+            healthImage.GetComponent<Image>().sprite = healthSprites[healthIndex];
+        }
     }
 
     void changeScore(int points) {
