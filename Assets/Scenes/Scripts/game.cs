@@ -267,7 +267,7 @@ public class game : MonoBehaviour
                 if (leftHits.Count+1 <  targetArrowIndex) {
                     for (int i = leftHits.Count+1; i <  targetArrowIndex; i++) {
                         leftHits.Add("missed");
-                        Debug.Log($"Missed");
+                        Debug.Log("Missed");
                         health -= 10;
                         addMiss();
                     }
@@ -283,6 +283,7 @@ public class game : MonoBehaviour
                     // screenFlash.Flash();
                     health += 5;
                     score += 20;
+                    Debug.Log("Perfect");
                 }
 
                 // good!
@@ -292,6 +293,7 @@ public class game : MonoBehaviour
                     Destroy(targetArrow);
                     screenFlash.Flash();
                     score += 10;
+                    Debug.Log("Good");
                     // screenFlash.Flash();
                 }
 
@@ -340,6 +342,7 @@ public class game : MonoBehaviour
                     for (int i = downHits.Count+1; i <  targetArrowIndex; i++) {
                         downHits.Add("missed");
                         health -= 10;
+                        Debug.Log("Missed");
                     }
                 }
 
@@ -352,6 +355,7 @@ public class game : MonoBehaviour
                     // screenFlash.Flash();
                     health += 5;
                     score += 20;
+                    Debug.Log("Perfect");
                 }
 
                 // good!
@@ -360,6 +364,7 @@ public class game : MonoBehaviour
                     Destroy(targetArrow);
                     screenFlash.Flash();
                     score += 10;
+                    Debug.Log("Good");
                     // screenFlash.Flash();
                 }
 
@@ -408,6 +413,7 @@ public class game : MonoBehaviour
                     for (int i = upHits.Count+1; i <  targetArrowIndex; i++) {
                         upHits.Add("missed");
                         health -= 10;
+                        Debug.Log("Missed");
                     }
                 }
 
@@ -420,6 +426,7 @@ public class game : MonoBehaviour
                     // screenFlash.Flash();
                     health += 5;
                     score += 20;
+                    Debug.Log("Perfect");
                 }
 
                 // good!
@@ -428,6 +435,7 @@ public class game : MonoBehaviour
                     Destroy(targetArrow);
                     screenFlash.Flash();
                     score += 10;
+                    Debug.Log("Good");
                     // screenFlash.Flash();
                 }
 
@@ -476,6 +484,7 @@ public class game : MonoBehaviour
                     for (int i = rightHits.Count+1; i <  targetArrowIndex; i++) {
                         rightHits.Add("missed");
                         health -= 10;
+                        Debug.Log("Missed");
                     }
                 }
 
@@ -488,6 +497,7 @@ public class game : MonoBehaviour
                     // screenFlash.Flash();
                     health += 5;
                     score += 20;
+                    Debug.Log("Perfect");
                 }
 
                 // good!
@@ -496,6 +506,7 @@ public class game : MonoBehaviour
                     Destroy(targetArrow);
                     screenFlash.Flash();
                     score += 10;
+                    Debug.Log("Good");
                     // screenFlash.Flash();
                 }
 
