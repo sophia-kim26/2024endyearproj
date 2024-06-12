@@ -20,11 +20,6 @@ public class Arrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            // Assuming this is the condition to make this arrow disappear
-            spriteRenderer.enabled = false;
-        }
     }
 
     public void Death()
