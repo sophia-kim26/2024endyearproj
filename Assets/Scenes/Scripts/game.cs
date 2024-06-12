@@ -280,9 +280,11 @@ public class game : MonoBehaviour
         for (int i = 0; i < Math.Abs(changes); i++) {
             if (changes < 0) {
                 healthIndex--;
+                if (healthIndex < 10) healthIndex = 0;
             }
             else {
                 healthIndex++;
+                if (healthIndex > 10) healthIndex = 10;
             }
             healthImage.GetComponent<Image>().sprite = healthSprites[healthIndex];
             Debug.Log("new health index: " + healthIndex);
