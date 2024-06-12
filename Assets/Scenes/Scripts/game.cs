@@ -277,7 +277,7 @@ public class game : MonoBehaviour
         }
         Debug.Log("past health: " + pastHealth);
         Debug.Log("new health: " + health);
-        int changes = (health / 10) - (pastHealth - 10);
+        int changes = (health / 10) - (pastHealth / 10);
         for (int i = 0; i < Math.Abs(changes); i++) {
             if (changes < 0) {
                 healthIndex--;
@@ -376,6 +376,7 @@ public class game : MonoBehaviour
             // so now we have our lil target arrow
 
             if (targetArrow != null) {
+                Debug.Log("in if for miss");
                 // if they missed any arrows
                 if (leftHits.Count+1 <  targetArrowIndex) {
                     for (int i = leftHits.Count+1; i <  targetArrowIndex; i++) {
