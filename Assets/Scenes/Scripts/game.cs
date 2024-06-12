@@ -246,8 +246,10 @@ public class game : MonoBehaviour
         SceneManager.LoadScene("endSuccess");
     }
     void ifPerfect() {
+        // changed this for testing purposes for now
+        changeScore(15);
+        // changeScore(20);
         changeHealth(5);
-        changeScore(20);
         Debug.Log("Perfect");
     }
 
@@ -262,16 +264,19 @@ public class game : MonoBehaviour
     }
 
     void changeHealth(int points) {
-        int pastHealth = points;
+        Debug.Log("in changeHealth");
+        int pastHealth = health;
         if (100 - health < points) {
             health = 100;
         }
-        if (health < points) {
+        else if (health < points) {
             health = 0;
         }
         else {
             health += points;
         }
+        Debug.Log("past health: " + pastHealth);
+        Debug.Log("new health: " + health);
         int changes = (health / 10) - (pastHealth - 10);
         for (int i = 0; i < Math.Abs(changes); i++) {
             if (changes < 0) {
@@ -281,20 +286,25 @@ public class game : MonoBehaviour
                 healthIndex++;
             }
             healthImage.GetComponent<Image>().sprite = healthSprites[healthIndex];
+            Debug.Log("new health index: " + healthIndex);
         }
     }
 
     void changeScore(int points) {
-        int pastScore = points;
+        Debug.Log("in changeScore");
+        int pastScore = score; // 0
         if (100 - score < points) {
             score = 100;
         }
         else {
-            score += points;
+            score += points; // 15
         }
-        int changes = (score / 10) - (pastScore - 10);
+        int changes = (score / 10) - (pastScore / 10); // 1 - 0 == 1
+        Debug.Log("past score: " + pastScore);
+        Debug.Log("new score: " + score);
         for (int i = 0; i < changes; i++) {
             scoreIndex++;
+            Debug.Log("new scoreIndex: " + scoreIndex);
             scoreImage.GetComponent<Image>().sprite = scoreSprites[scoreIndex];
 
         }
