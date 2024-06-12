@@ -266,7 +266,7 @@ public class game : MonoBehaviour
                 }
 
                 // good!
-                else if (Mathf.Abs(targetArrowY-3.36f) < 0.75f) {
+                else if (Mathf.Abs(targetArrowY-3.36f) <  0.80f) {
                     screenFlash.Flash();
                     leftHits.Add("good");
                     Destroy(targetArrow);
@@ -330,7 +330,7 @@ public class game : MonoBehaviour
                 }
 
                 // good!
-                else if (Mathf.Abs(targetArrowY-3.36f) < 0.75f) {
+                else if (Mathf.Abs(targetArrowY-3.36f) <  0.80f) {
                     downHits.Add("good");
                     Destroy(targetArrow);
                     screenFlash.Flash();
@@ -393,7 +393,7 @@ public class game : MonoBehaviour
                 }
 
                 // good!
-                else if (Mathf.Abs(targetArrowY-3.36f) < 0.75f) {
+                else if (Mathf.Abs(targetArrowY-3.36f) <  0.80f) {
                     upHits.Add("good");
                     Destroy(targetArrow);
                     screenFlash.Flash();
@@ -456,7 +456,7 @@ public class game : MonoBehaviour
                 }
 
                 // good!
-                else if (Mathf.Abs(targetArrowY-3.36f) < 0.75f) {
+                else if (Mathf.Abs(targetArrowY-3.36f) <  0.80f) {
                     rightHits.Add("good");
                     Destroy(targetArrow);
                     screenFlash.Flash();
