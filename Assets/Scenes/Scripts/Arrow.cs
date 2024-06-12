@@ -5,7 +5,6 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     [SerializeField]
-    private ArrowType arrowType;
     private SpriteRenderer spriteRenderer;
 
 
@@ -23,10 +22,5 @@ public class Arrow : MonoBehaviour
 
     public float getY() {
         return transform.position.y;
-    }
-
-    public ArrowType GetArrowType()
-    {
-        return arrowType;
     }
 }
