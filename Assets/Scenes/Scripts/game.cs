@@ -236,7 +236,6 @@ public class game : MonoBehaviour
         addUp(-274f);
         addRight(-274f); 
 
-        Debug.Log("# of left arrows:" + lefts.Count);
         endSuccess();
     }
 
