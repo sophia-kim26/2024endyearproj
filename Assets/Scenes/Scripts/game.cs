@@ -281,7 +281,7 @@ public class game : MonoBehaviour
                     Destroy(targetArrow);
                 }
 
-                lefts[ targetArrowIndex] = null;
+                lefts[targetArrowIndex] = null;
             }
 
             // if (Conductor.Instance.CheckHit(ArrowType.UPARROW) == true) {
