@@ -237,10 +237,14 @@ public class game : MonoBehaviour
         addRight(-274f);
 
         Debug.Log("# of left arrows:" + lefts.Count);
-        // Thread.sleep(4000);
-        // SceneManager.LoadScene("end");
+        endSuccess();
     }
 
+    private async void endSuccess()
+    {
+        await Task.Delay(40000);
+        SceneManager.LoadScene("endSuccess");
+    }
     void ifPerfect() {
         // changed this for testing purposes for now
         changeScore(15);
@@ -343,7 +347,7 @@ public class game : MonoBehaviour
             gameOver = true;
         }
         if (gameOver == true){
-            // SceneManager.LoadScene("end");
+            SceneManager.LoadScene("endFail");
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow)) {
             Debug.Log("left arrow pressed");
