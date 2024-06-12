@@ -402,7 +402,7 @@ public class game : MonoBehaviour
                     // screenFlash.Flash();
                     leftHits.Add("good");
                     Destroy(targetArrow);
-                    screenFlash.Flash();
+                    // screenFlash.Flash();
                     ifGood();
                     // screenFlash.Flash();
                     //addGood();
@@ -439,7 +439,7 @@ public class game : MonoBehaviour
                             // if this arrow is closer than target arrow make this target arrow
                             if (Mathf.Abs(arrowY-3.36f) < Mathf.Abs(targetArrow.transform.position.y - 3.36f)) {
                                 targetArrow = downs[i];
-                                 targetArrowIndex = i;
+                                targetArrowIndex = i;
                             }
                         }
                     }
@@ -472,7 +472,7 @@ public class game : MonoBehaviour
                 else if (Mathf.Abs(targetArrowY-3.36f) <  0.80f) {
                     downHits.Add("good");
                     Destroy(targetArrow);
-                    screenFlash.Flash();
+                    // screenFlash.Flash();
                     ifGood();
                     // screenFlash.Flash();
                     //addGood();
@@ -509,7 +509,7 @@ public class game : MonoBehaviour
                             // if this arrow is closer than target arrow make this target arrow
                             if (Mathf.Abs(arrowY-3.36f) < Mathf.Abs(targetArrow.transform.position.y - 3.36f)) {
                                 targetArrow = ups[i];
-                                 targetArrowIndex = i;
+                                targetArrowIndex = i;
                             }
                         }
                     }

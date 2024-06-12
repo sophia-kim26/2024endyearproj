@@ -5,7 +5,6 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     [SerializeField]
-    private GameObject deathParticles;
     private ArrowType arrowType;
     private SpriteRenderer spriteRenderer;
 
@@ -20,12 +19,6 @@ public class Arrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    }
-
-    public void Death()
-    {
-        Instantiate(deathParticles, gameObject.transform.position, Quaternion.identity);
-        Destroy(gameObject);
     }
 
     public float getY() {
