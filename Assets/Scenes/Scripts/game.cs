@@ -224,6 +224,12 @@ public class game : MonoBehaviour
     void addMiss() {
         GameObject newMiss = Instantiate(miss, new Vector3(10.0f, 20.0f, 0), Quaternion.identity);
     }
+    void addPerfect() {
+        GameObject newPerfect = Instantiate(perfect, new Vector3(10.0f, 20.0f, 0), Quaternion.identity);
+    }
+    void addGood() {
+        GameObject newGood = Instantiate(good, new Vector3(10.0f, 20.0f, 0), Quaternion.identity);
+    }
 
     // Update is called once per frame
     void Update()
@@ -269,7 +275,7 @@ public class game : MonoBehaviour
                         leftHits.Add("missed");
                         Debug.Log("Missed");
                         health -= 10;
-                        addMiss();
+                        //addMiss();
                     }
                 }
 
@@ -284,6 +290,7 @@ public class game : MonoBehaviour
                     health += 5;
                     score += 20;
                     Debug.Log("Perfect");
+                    //addPerfect();
                 }
 
                 // good!
@@ -295,6 +302,7 @@ public class game : MonoBehaviour
                     score += 10;
                     Debug.Log("Good");
                     // screenFlash.Flash();
+                    //addGood();
                 }
 
                 lefts[targetArrowIndex] = null;
@@ -343,6 +351,7 @@ public class game : MonoBehaviour
                         downHits.Add("missed");
                         health -= 10;
                         Debug.Log("Missed");
+                        //addMiss();
                     }
                 }
 
@@ -356,6 +365,7 @@ public class game : MonoBehaviour
                     health += 5;
                     score += 20;
                     Debug.Log("Perfect");
+                    //addPerfect();
                 }
 
                 // good!
@@ -366,6 +376,7 @@ public class game : MonoBehaviour
                     score += 10;
                     Debug.Log("Good");
                     // screenFlash.Flash();
+                    //addGood();
                 }
 
                 downs[targetArrowIndex] = null;
@@ -414,6 +425,7 @@ public class game : MonoBehaviour
                         upHits.Add("missed");
                         health -= 10;
                         Debug.Log("Missed");
+                        //addMiss();
                     }
                 }
 
@@ -427,6 +439,7 @@ public class game : MonoBehaviour
                     health += 5;
                     score += 20;
                     Debug.Log("Perfect");
+                    //addPerfect();
                 }
 
                 // good!
@@ -437,6 +450,7 @@ public class game : MonoBehaviour
                     score += 10;
                     Debug.Log("Good");
                     // screenFlash.Flash();
+                    //addGood();
                 }
 
                 ups[targetArrowIndex] = null;
@@ -485,6 +499,7 @@ public class game : MonoBehaviour
                         rightHits.Add("missed");
                         health -= 10;
                         Debug.Log("Missed");
+                        //addMiss();
                     }
                 }
 
@@ -498,6 +513,7 @@ public class game : MonoBehaviour
                     health += 5;
                     score += 20;
                     Debug.Log("Perfect");
+                    //addPerfect();
                 }
 
                 // good!
@@ -508,6 +524,7 @@ public class game : MonoBehaviour
                     score += 10;
                     Debug.Log("Good");
                     // screenFlash.Flash();
+                    //addGood();
                 }
 
                 rights[targetArrowIndex] = null;
