@@ -237,7 +237,7 @@ public class game : MonoBehaviour
         addRight(-274f);
 
         Debug.Log("# of left arrows:" + lefts.Count);
-        Thread.sleep(4000);
+        // Thread.sleep(4000);
         SceneManager.LoadScene("end");
     }
 
