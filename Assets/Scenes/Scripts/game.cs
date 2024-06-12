@@ -246,7 +246,7 @@ public class game : MonoBehaviour
                             // if this arrow is closer than target arrow make this target arrow
                             if (Mathf.Abs(arrowY-3.36f) < Mathf.Abs(targetArrow.transform.position.y - 3.36f)) {
                                 targetArrow = lefts[i];
-                                 targetArrowIndex = i;
+                                targetArrowIndex = i;
                             }
                         }
                     }
@@ -267,19 +267,19 @@ public class game : MonoBehaviour
 
                 // perfect!
                 if (Mathf.Abs(targetArrowY-3.36f) < 0.40f) {
-                    screenFlash.Flash();
+                    // screenFlash.Flash();
                     leftHits.Add("perfect");
                     Destroy(targetArrow);
-                    screenFlash.Flash();
+                    // screenFlash.Flash();
                     health += 5;
                 }
 
                 // good!
                 else if (Mathf.Abs(targetArrowY-3.36f) <  0.80f) {
-                    screenFlash.Flash();
+                    // screenFlash.Flash();
                     leftHits.Add("good");
                     Destroy(targetArrow);
-                    screenFlash.Flash();
+                    // screenFlash.Flash();
                 }
 
                 lefts[targetArrowIndex] = null;
@@ -307,7 +307,7 @@ public class game : MonoBehaviour
                         // if there's no current target arrow to compare it to make it the target arrow
                         if (targetArrow == null) {
                             targetArrow = downs[i];
-                             targetArrowIndex = i;
+                            targetArrowIndex = i;
                         }
                         else {
                             // if this arrow is closer than target arrow make this target arrow
@@ -336,7 +336,7 @@ public class game : MonoBehaviour
                 if (Mathf.Abs(targetArrowY-3.36f) < 0.40f) {
                     downHits.Add("perfect");
                     Destroy(targetArrow);
-                    screenFlash.Flash();
+                    // screenFlash.Flash();
                     health += 5;
                 }
 
@@ -344,7 +344,7 @@ public class game : MonoBehaviour
                 else if (Mathf.Abs(targetArrowY-3.36f) <  0.80f) {
                     downHits.Add("good");
                     Destroy(targetArrow);
-                    screenFlash.Flash();
+                    // screenFlash.Flash();
                 }
 
                 downs[targetArrowIndex] = null;
@@ -401,7 +401,7 @@ public class game : MonoBehaviour
                 if (Mathf.Abs(targetArrowY-3.36f) < 0.40f) {
                     upHits.Add("perfect");
                     Destroy(targetArrow);
-                    screenFlash.Flash();
+                    // screenFlash.Flash();
                     health += 5;
                 }
 
@@ -409,7 +409,7 @@ public class game : MonoBehaviour
                 else if (Mathf.Abs(targetArrowY-3.36f) <  0.80f) {
                     upHits.Add("good");
                     Destroy(targetArrow);
-                    screenFlash.Flash();
+                    // screenFlash.Flash();
                 }
 
                 ups[targetArrowIndex] = null;
@@ -466,7 +466,7 @@ public class game : MonoBehaviour
                 if (Mathf.Abs(targetArrowY-3.36f) < 0.40f) {
                     rightHits.Add("perfect");
                     Destroy(targetArrow);
-                    screenFlash.Flash();
+                    // screenFlash.Flash();
                     health += 5;
                 }
 
@@ -474,7 +474,7 @@ public class game : MonoBehaviour
                 else if (Mathf.Abs(targetArrowY-3.36f) <  0.80f) {
                     rightHits.Add("good");
                     Destroy(targetArrow);
-                    screenFlash.Flash();
+                    // screenFlash.Flash();
                 }
 
                 rights[targetArrowIndex] = null;
