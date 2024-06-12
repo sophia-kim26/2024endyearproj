@@ -334,11 +334,9 @@ public class game : MonoBehaviour
     void Update()
     {
         if (health <= 0){
-            gameOver = true;
-        }
-        if (gameOver == true){
             SceneManager.LoadScene("endFail");
         }
+
         if (Input.GetKeyDown(KeyCode.LeftArrow)) {
             Debug.Log("left arrow pressed");
             
