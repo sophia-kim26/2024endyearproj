@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class game : MonoBehaviour
 {
@@ -27,6 +28,32 @@ public class game : MonoBehaviour
     public List<GameObject> rights = new List<GameObject>();
     public List<string> rightHits = new List<string>();
     public ScreenFlash screenFlash;
+
+    public Image scoreImage;
+    public Sprite score0;
+    public Sprite score10;
+    public Sprite score20;
+    public Sprite score30;
+    public Sprite score40;
+    public Sprite score50;
+    public Sprite score60;
+    public Sprite score70;
+    public Sprite score80;
+    public Sprite score90;
+    public Sprite score100;
+
+    public Image healthImage;
+    public Sprite health0;
+    public Sprite health10;
+    public Sprite health20;
+    public Sprite health30;
+    public Sprite health40;
+    public Sprite health50;
+    public Sprite health60;
+    public Sprite health70;
+    public Sprite health80;
+    public Sprite health90;
+    public Sprite health100;
     
     // Start is called before the first frame update    
     void Start()
@@ -218,6 +245,7 @@ public class game : MonoBehaviour
     }
 
     void changeHealth(int points) {
+        // int pastHealth = points;
         if (100 - health < points) {
             health = 100;
         }
@@ -227,14 +255,24 @@ public class game : MonoBehaviour
         else {
             health += points;
         }
+        int changes = (health / 10) - (pastHealth - 10);
+        // this is the code for changing the image
+        // for (int i = 0; i < changes; i++) {
+        //     Image.GetComponent<Image>().sprite = newImage;
+        // }
     }
 
     void changeScore(int points) {
+        int pastScore = points;
         if (100 - score < points) {
             score = 100;
         }
         else {
             score += points;
+        }
+        int changes = (score / 10) - (pastScore - 10);
+        for (int i = 0; i < changes; i++) {
+            Image.GetComponent<Image>().sprite = newImage;
         }
     }
 
