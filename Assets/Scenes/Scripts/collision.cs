@@ -16,11 +16,6 @@ public class Collision : MonoBehaviour
     // private bool isHitting;
     // private bool killable;
 
-    private int il = 0;
-    private int id = 0;
-    private int iu = 0;
-    private int ir = 0;
-
     // private ArrowType currentKillingType; // TODO
 
     void Start() {
