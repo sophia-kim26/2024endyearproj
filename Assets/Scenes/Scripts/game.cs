@@ -13,6 +13,7 @@ public class game : MonoBehaviour
     public GameObject upArrow;
     public GameObject rightArrow;
     public bool gameOver = false;
+    public int health = 100;
     public List<GameObject> lefts = new List<GameObject>();
     public List<string> leftHits = new List<string>();
     public List<GameObject> downs = new List<GameObject>();
@@ -219,6 +220,12 @@ public class game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health <= 0){
+            gameOver == true;
+        }
+        if(gameOver == true){
+            SceneManager.LoadScene("end");
+        }
         if (Input.GetKeyDown(KeyCode.LeftArrow)) {
             Debug.Log("left arrow pressed");
             
@@ -252,6 +259,7 @@ public class game : MonoBehaviour
                 if (leftHits.Count+1 <  targetArrowIndex) {
                     for (int i = leftHits.Count+1; i <  targetArrowIndex; i++) {
                         leftHits.Add("missed");
+                        health -= 10;
                     }
                 }
 
@@ -263,6 +271,7 @@ public class game : MonoBehaviour
                     leftHits.Add("perfect");
                     Destroy(targetArrow);
                     screenFlash.Flash();
+                    health += 5;
                 }
 
                 // good!
@@ -317,6 +326,7 @@ public class game : MonoBehaviour
                 if (downHits.Count+1 <  targetArrowIndex) {
                     for (int i = downHits.Count+1; i <  targetArrowIndex; i++) {
                         downHits.Add("missed");
+                        health -= 10;
                     }
                 }
 
@@ -327,6 +337,7 @@ public class game : MonoBehaviour
                     downHits.Add("perfect");
                     Destroy(targetArrow);
                     screenFlash.Flash();
+                    health += 5;
                 }
 
                 // good!
@@ -380,6 +391,7 @@ public class game : MonoBehaviour
                 if (upHits.Count+1 <  targetArrowIndex) {
                     for (int i = upHits.Count+1; i <  targetArrowIndex; i++) {
                         upHits.Add("missed");
+                        health -= 10;
                     }
                 }
 
@@ -390,6 +402,7 @@ public class game : MonoBehaviour
                     upHits.Add("perfect");
                     Destroy(targetArrow);
                     screenFlash.Flash();
+                    health += 5;
                 }
 
                 // good!
@@ -443,6 +456,7 @@ public class game : MonoBehaviour
                 if (rightHits.Count+1 <  targetArrowIndex) {
                     for (int i = rightHits.Count+1; i <  targetArrowIndex; i++) {
                         rightHits.Add("missed");
+                        health -= 10;
                     }
                 }
 
@@ -453,6 +467,7 @@ public class game : MonoBehaviour
                     rightHits.Add("perfect");
                     Destroy(targetArrow);
                     screenFlash.Flash();
+                    health += 5;
                 }
 
                 // good!
