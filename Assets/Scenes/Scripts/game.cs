@@ -22,6 +22,7 @@ public class game : MonoBehaviour
     public List<string> upHits = new List<string>();
     public List<GameObject> rights = new List<GameObject>();
     public List<string> rightHits = new List<string>();
+    public ScreenFlash screenFlash;
     
     // Start is called before the first frame update    
     void Start()
@@ -269,6 +270,7 @@ public class game : MonoBehaviour
                     screenFlash.Flash();
                     leftHits.Add("perfect");
                     Destroy(targetArrow);
+                    screenFlash.Flash();
                     health += 5;
                 }
 
@@ -277,6 +279,7 @@ public class game : MonoBehaviour
                     screenFlash.Flash();
                     leftHits.Add("good");
                     Destroy(targetArrow);
+                    screenFlash.Flash();
                 }
 
                 lefts[targetArrowIndex] = null;
@@ -333,6 +336,7 @@ public class game : MonoBehaviour
                 if (Mathf.Abs(targetArrowY-3.36f) < 0.40f) {
                     downHits.Add("perfect");
                     Destroy(targetArrow);
+                    screenFlash.Flash();
                     health += 5;
                 }
 
@@ -340,6 +344,7 @@ public class game : MonoBehaviour
                 else if (Mathf.Abs(targetArrowY-3.36f) < 0.75f) {
                     downHits.Add("good");
                     Destroy(targetArrow);
+                    screenFlash.Flash();
                 }
 
                 downs[targetArrowIndex] = null;
@@ -396,6 +401,7 @@ public class game : MonoBehaviour
                 if (Mathf.Abs(targetArrowY-3.36f) < 0.40f) {
                     upHits.Add("perfect");
                     Destroy(targetArrow);
+                    screenFlash.Flash();
                     health += 5;
                 }
 
@@ -403,6 +409,7 @@ public class game : MonoBehaviour
                 else if (Mathf.Abs(targetArrowY-3.36f) < 0.75f) {
                     upHits.Add("good");
                     Destroy(targetArrow);
+                    screenFlash.Flash();
                 }
 
                 ups[targetArrowIndex] = null;
@@ -459,6 +466,7 @@ public class game : MonoBehaviour
                 if (Mathf.Abs(targetArrowY-3.36f) < 0.40f) {
                     rightHits.Add("perfect");
                     Destroy(targetArrow);
+                    screenFlash.Flash();
                     health += 5;
                 }
 
@@ -466,6 +474,7 @@ public class game : MonoBehaviour
                 else if (Mathf.Abs(targetArrowY-3.36f) < 0.75f) {
                     rightHits.Add("good");
                     Destroy(targetArrow);
+                    screenFlash.Flash();
                 }
 
                 rights[targetArrowIndex] = null;
