@@ -29,6 +29,7 @@ public class game : MonoBehaviour
     public List<string> rightHits = new List<string>();
     public ScreenFlash screenFlash;
 
+    // score images
     public Image scoreImage;
     public Sprite score0;
     public Sprite score10;
@@ -42,8 +43,10 @@ public class game : MonoBehaviour
     public Sprite score90;
     public Sprite score100;
 
-    public List<Sprite> scoreSprites = new List<Sprite>(score0, score10, score20, score30, score40, score50, score60, score70, score80, score90, score100);
+    // add to list
+    // public List<Sprite> scoreSprites = new List<Sprite>(){score0, score10, score20, score30, score40, score50, score60, score70, score80, score90, score100};
 
+    // health images
     public Image healthImage;
     public Sprite health0;
     public Sprite health10;
@@ -57,7 +60,12 @@ public class game : MonoBehaviour
     public Sprite health90;
     public Sprite health100;
 
-    public List<Sprite> healthSprites = new List<Sprite>(health0, health10, health20, health30, health40, health50, health60, health70, health80, health90, health100);
+    // add to list
+    // public List<Sprite> healthSprites = new List<Sprite>(){health0, health10, health20, health30, health40, health50, health60, health70, health80, health90, health100};
+
+    // indexes
+    int scoreIndex = 0;
+    int healthIndex = 0;
     
     // Start is called before the first frame update    
     void Start()
@@ -259,7 +267,7 @@ public class game : MonoBehaviour
         else {
             health += points;
         }
-        int changes = (health / 10) - (pastHealth - 10);
+        // int changes = (health / 10) - (pastHealth - 10);
         // this is the code for changing the image
         // for (int i = 0; i < changes; i++) {
         //     Image.GetComponent<Image>().sprite = newImage;
@@ -276,7 +284,9 @@ public class game : MonoBehaviour
         }
         int changes = (score / 10) - (pastScore - 10);
         for (int i = 0; i < changes; i++) {
-            Image.GetComponent<Image>().sprite = newImage;
+            scoreImage.GetComponent<Image>().sprite = scoreSprites.Get(scoreIndex);
+            scoreIndex++;
+
         }
     }
 
