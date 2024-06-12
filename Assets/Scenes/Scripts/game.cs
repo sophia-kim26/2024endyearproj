@@ -433,6 +433,18 @@ public class game : MonoBehaviour
             }
             // so now we have our lil target arrow
 
+            for (int i = 0; i < lefts.Count; i++) {
+                if (lefts[i] != null) {
+                    if (lefts[i].transform.position.y > 55f && i > targetArrowIndexLeft) {
+                        leftHits.Add("miss");
+                        Debug.Log("added miss");
+                        ifMiss();
+                        Destroy(lefts[i]);
+                        lefts[i] = null;
+                    }
+                }
+            }
+
             if (targetArrowLeft != null)
             {
                 // if they missed any arrows
@@ -443,6 +455,7 @@ public class game : MonoBehaviour
                     {
                         leftHits.Add("missed");
                         ifMiss();
+                        Debug.Log(leftHits[leftHits.Count]);
                         //addMiss();
                     }
                 }
@@ -630,7 +643,7 @@ public class game : MonoBehaviour
                 {
                     upHits.Add("good");
                     Destroy(targetArrowUp);
-                    screenFlash.Flash();
+                    // screenFlash.Flash();
                     ifGood();
                     // screenFlash.Flash();
                     //addGood();
@@ -712,7 +725,7 @@ public class game : MonoBehaviour
                 {
                     rightHits.Add("good");
                     Destroy(targetArrowRight);
-                    screenFlash.Flash();
+                    // screenFlash.Flash();
                     ifGood();
                     // screenFlash.Flash();
                     //addGood();
