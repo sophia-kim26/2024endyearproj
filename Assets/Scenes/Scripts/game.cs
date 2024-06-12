@@ -17,6 +17,7 @@ public class game : MonoBehaviour
     public GameObject miss;
     public GameObject perfect;
     public GameObject good;
+    public PerfectVisibility pv; 
     public bool gameOver = false;
     public int health = 100;
     public int score = 0;
@@ -250,6 +251,7 @@ public class game : MonoBehaviour
         // changeScore(20);
         changeHealth(5);
         Debug.Log("Perfect");
+        pv.on();
     }
 
     void ifGood() {
