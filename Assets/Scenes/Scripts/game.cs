@@ -236,10 +236,14 @@ public class game : MonoBehaviour
         addRight(-274f);
 
         Debug.Log("# of left arrows:" + lefts.Count);
-        Thread.sleep(4000);
-        SceneManager.LoadScene("end");
+        endGame();
     }
 
+    private async void endGame()
+    {
+        await Task.Delay(40000);
+        SceneManager.LoadScene("end");
+    }
     void ifPerfect() {
         changeHealth(5);
         changeScore(20);
