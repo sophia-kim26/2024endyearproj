@@ -291,5 +291,189 @@ public class game : MonoBehaviour
             //     score += 10;
             // }
         }
-    }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow)) {
+            Debug.Log("down arrow pressed");
+            
+            GameObject targetArrow = null;
+            int  targetArrowIndex = -1;
+            for (int i = 0; i < downs.Count; i++) {
+
+                if (downs[i] != null) {
+                    float arrowY = downs[i].transform.position.y;
+                    // if the arrow is in the valid hit area
+                    if (arrowY > 2.8f && arrowY < 5.0f) { 
+                        // if there's no current target arrow to compare it to make it the target arrow
+                        if (targetArrow == null) {
+                            targetArrow = downs[i];
+                             targetArrowIndex = i;
+                        }
+                        else {
+                            // if this arrow is closer than target arrow make this target arrow
+                            if (Mathf.Abs(arrowY-3.36f) < Mathf.Abs(targetArrow.transform.position.y - 3.36f)) {
+                                targetArrow = downs[i];
+                                 targetArrowIndex = i;
+                            }
+                        }
+                    }
+                }
+            }
+            // so now we have our lil target arrow
+
+            if (targetArrow != null) {
+                // if they missed any arrows
+                if (downHits.Count+1 <  targetArrowIndex) {
+                    for (int i = downHits.Count+1; i <  targetArrowIndex; i++) {
+                        downHits.Add("missed");
+                    }
+                }
+
+                float targetArrowY = targetArrow.transform.position.y;
+
+                // perfect!
+                if (Mathf.Abs(targetArrowY-3.36f) < 0.40f) {
+                    downHits.Add("perfect");
+                    Destroy(targetArrow);
+                }
+
+                // good!
+                else if (Mathf.Abs(targetArrowY-3.36f) < 0.75f) {
+                    downHits.Add("good");
+                    Destroy(targetArrow);
+                }
+
+                downs[targetArrowIndex] = null;
+            }
+
+            // if (Conductor.Instance.CheckHit(ArrowType.UPARROW) == true) {
+            //     Debug.Log("up arrow hit!!");
+            //     screenFlash.Flash();
+
+            //     score += 10;
+            // }
+        }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow)) {
+            Debug.Log("up arrow pressed");
+            
+            GameObject targetArrow = null;
+            int  targetArrowIndex = -1;
+            for (int i = 0; i < ups.Count; i++) {
+
+                if (ups[i] != null) {
+                    float arrowY = ups[i].transform.position.y;
+                    // if the arrow is in the valid hit area
+                    if (arrowY > 2.8f && arrowY < 5.0f) { 
+                        // if there's no current target arrow to compare it to make it the target arrow
+                        if (targetArrow == null) {
+                            targetArrow = ups[i];
+                             targetArrowIndex = i;
+                        }
+                        else {
+                            // if this arrow is closer than target arrow make this target arrow
+                            if (Mathf.Abs(arrowY-3.36f) < Mathf.Abs(targetArrow.transform.position.y - 3.36f)) {
+                                targetArrow = ups[i];
+                                 targetArrowIndex = i;
+                            }
+                        }
+                    }
+                }
+            }
+            // so now we have our lil target arrow
+
+            if (targetArrow != null) {
+                // if they missed any arrows
+                if (upHits.Count+1 <  targetArrowIndex) {
+                    for (int i = upHits.Count+1; i <  targetArrowIndex; i++) {
+                        upHits.Add("missed");
+                    }
+                }
+
+                float targetArrowY = targetArrow.transform.position.y;
+
+                // perfect!
+                if (Mathf.Abs(targetArrowY-3.36f) < 0.40f) {
+                    upHits.Add("perfect");
+                    Destroy(targetArrow);
+                }
+
+                // good!
+                else if (Mathf.Abs(targetArrowY-3.36f) < 0.75f) {
+                    upHits.Add("good");
+                    Destroy(targetArrow);
+                }
+
+                ups[targetArrowIndex] = null;
+            }
+
+            // if (Conductor.Instance.CheckHit(ArrowType.UPARROW) == true) {
+            //     Debug.Log("up arrow hit!!");
+            //     screenFlash.Flash();
+
+            //     score += 10;
+            // }
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow)) {
+            Debug.Log("right arrow pressed");
+            
+            GameObject targetArrow = null;
+            int  targetArrowIndex = -1;
+            for (int i = 0; i < rights.Count; i++) {
+
+                if (rights[i] != null) {
+                    float arrowY = rights[i].transform.position.y;
+                    // if the arrow is in the valid hit area
+                    if (arrowY > 2.8f && arrowY < 5.0f) { 
+                        // if there's no current target arrow to compare it to make it the target arrow
+                        if (targetArrow == null) {
+                            targetArrow = rights[i];
+                             targetArrowIndex = i;
+                        }
+                        else {
+                            // if this arrow is closer than target arrow make this target arrow
+                            if (Mathf.Abs(arrowY-3.36f) < Mathf.Abs(targetArrow.transform.position.y - 3.36f)) {
+                                targetArrow = rights[i];
+                                 targetArrowIndex = i;
+                            }
+                        }
+                    }
+                }
+            }
+            // so now we have our lil target arrow
+
+            if (targetArrow != null) {
+                // if they missed any arrows
+                if (rightHits.Count+1 <  targetArrowIndex) {
+                    for (int i = rightHits.Count+1; i <  targetArrowIndex; i++) {
+                        rightHits.Add("missed");
+                    }
+                }
+
+                float targetArrowY = targetArrow.transform.position.y;
+
+                // perfect!
+                if (Mathf.Abs(targetArrowY-3.36f) < 0.40f) {
+                    rightHits.Add("perfect");
+                    Destroy(targetArrow);
+                }
+
+                // good!
+                else if (Mathf.Abs(targetArrowY-3.36f) < 0.75f) {
+                    rightHits.Add("good");
+                    Destroy(targetArrow);
+                }
+
+                rights[targetArrowIndex] = null;
+            }
+
+            // if (Conductor.Instance.CheckHit(ArrowType.UPARROW) == true) {
+            //     Debug.Log("up arrow hit!!");
+            //     screenFlash.Flash();
+
+            //     score += 10;
+            // }
+        }
+
+    }  
 }
