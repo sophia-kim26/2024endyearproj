@@ -31,34 +31,34 @@ public class game : MonoBehaviour
 
     // score images
     public Image scoreImage;
-    public Sprite score0;
-    public Sprite score10;
-    public Sprite score20;
-    public Sprite score30;
-    public Sprite score40;
-    public Sprite score50;
-    public Sprite score60;
-    public Sprite score70;
-    public Sprite score80;
-    public Sprite score90;
-    public Sprite score100;
+    public static Sprite score0;
+    public static Sprite score10;
+    public static Sprite score20;
+    public static Sprite score30;
+    public static Sprite score40;
+    public static Sprite score50;
+    public static Sprite score60;
+    public static Sprite score70;
+    public static Sprite score80;
+    public static Sprite score90;
+    public static Sprite score100;
 
     // add to list
     public List<Sprite> scoreSprites = new List<Sprite>{score0, score10, score20, score30, score40, score50, score60, score70, score80, score90, score100};
 
     // health images
     public Image healthImage;
-    public Sprite health0;
-    public Sprite health10;
-    public Sprite health20;
-    public Sprite health30;
-    public Sprite health40;
-    public Sprite health50;
-    public Sprite health60;
-    public Sprite health70;
-    public Sprite health80;
-    public Sprite health90;
-    public Sprite health100;
+    public static Sprite health0;
+    public static Sprite health10;
+    public static Sprite health20;
+    public static Sprite health30;
+    public static Sprite health40;
+    public static Sprite health50;
+    public static Sprite health60;
+    public static Sprite health70;
+    public static Sprite health80;
+    public static Sprite health90;
+    public static Sprite health100;
 
     // add to list
     public List<Sprite> healthSprites = new List<Sprite>{health0, health10, health20, health30, health40, health50, health60, health70, health80, health90, health100};
@@ -284,8 +284,8 @@ public class game : MonoBehaviour
         }
         int changes = (score / 10) - (pastScore - 10);
         for (int i = 0; i < changes; i++) {
-            scoreImage.GetComponent<Image>().sprite = scoreSprites.Get(scoreIndex);
             scoreIndex++;
+            scoreImage.GetComponent<Image>().sprite = scoreSprites[scoreIndex];
 
         }
     }
