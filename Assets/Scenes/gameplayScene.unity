@@ -847,7 +847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d39066554ae4a1b80d1673b015b130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenFlash: {fileID: 0}
 --- !u!114 &327456550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -872,7 +871,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d39066554ae4a1b80d1673b015b130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenFlash: {fileID: 0}
 --- !u!114 &327456552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1318,7 +1316,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d39066554ae4a1b80d1673b015b130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenFlash: {fileID: 0}
 --- !u!114 &675167658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1331,7 +1328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d39066554ae4a1b80d1673b015b130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenFlash: {fileID: 0}
 --- !u!114 &675167659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1442,7 +1438,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d39066554ae4a1b80d1673b015b130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenFlash: {fileID: 0}
 --- !u!114 &931026016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2050,7 +2045,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d39066554ae4a1b80d1673b015b130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenFlash: {fileID: 0}
 --- !u!114 &1496260884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2826,7 +2820,12 @@ MonoBehaviour:
   downArrow: {fileID: 54841845}
   upArrow: {fileID: 186546192}
   rightArrow: {fileID: 174882021}
+  miss: {fileID: 1720414822}
+  perfect: {fileID: 1521878707}
+  good: {fileID: 963822755}
   gameOver: 0
+  health: 100
+  score: 0
   lefts: []
   leftHits: []
   downs: []
