@@ -2835,6 +2835,32 @@ MonoBehaviour:
   rights: []
   rightHits: []
   screenFlash: {fileID: 0}
+  scoreImage: {fileID: 1520861880}
+  scoreSprites:
+  - {fileID: 21300000, guid: 1e3b7cb7f67024c6499a5345f9a05c38, type: 3}
+  - {fileID: 21300000, guid: 0f4047e162f5e489781feca1d77268d8, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  healthImage: {fileID: 1641980947}
+  healthSprites:
+  - {fileID: 21300000, guid: 9e703a99a9a864875be9be333c9e7dc3, type: 3}
+  - {fileID: 21300000, guid: 810584d5602244fa185f421c05d0e2ad, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &2136813068
 MonoBehaviour:
   m_ObjectHideFlags: 0
