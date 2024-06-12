@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChangeLifeImage : MonoBehaviour
+public class ChangeImage : MonoBehaviour
 {
-    // [SerializeField]
     public Image oldImage;
-    // [SerializeField]
     public Sprite newImage;
     // Start is called before the first frame update
     void Start()
