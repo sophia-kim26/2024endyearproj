@@ -17,7 +17,7 @@ public class game : MonoBehaviour
     public GameObject miss;
     public GameObject perfect;
     public GameObject good;
-    public PerfectVisibility pv;
+
     public bool gameOver = false;
     public int health = 100;
     public int score = 0;
@@ -252,20 +252,36 @@ public class game : MonoBehaviour
         // changeScore(20);
         changeHealth(5);
         Debug.Log("Perfect");
-        pv = GameObject.FindGameObjectsWithTag("perfect").GetComponent<SpriteRenderer>();
+        SpriteRenderer pv = perfect.GetComponent<SpriteRenderer>();
         pv.enabled = true;
+        SpriteRenderer gv = good.GetComponent<SpriteRenderer>();
+        gv.enabled = false;
+        SpriteRenderer mv = miss.GetComponent<SpriteRenderer>();
+        mv.enabled = false;
     }
 
     void ifGood()
     {
         changeScore(10);
         Debug.Log("Good");
+        SpriteRenderer pv = perfect.GetComponent<SpriteRenderer>();
+        pv.enabled = false;
+        SpriteRenderer gv = good.GetComponent<SpriteRenderer>();
+        gv.enabled = true;
+        SpriteRenderer mv = miss.GetComponent<SpriteRenderer>();
+        mv.enabled = false;
     }
 
     void ifMiss()
     {
         changeHealth(10);
         Debug.Log("Missed");
+        SpriteRenderer pv = perfect.GetComponent<SpriteRenderer>();
+        pv.enabled = false;
+        SpriteRenderer gv = good.GetComponent<SpriteRenderer>();
+        gv.enabled = false;
+        SpriteRenderer mv = miss.GetComponent<SpriteRenderer>();
+        mv.enabled = true;
     }
 
     void changeHealth(int points)

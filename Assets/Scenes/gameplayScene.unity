@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a390c2fc516384526adab6922f640b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowType: 0
+  spriteRenderer: {fileID: 0}
 --- !u!1 &174882021
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a390c2fc516384526adab6922f640b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowType: 0
+  spriteRenderer: {fileID: 0}
 --- !u!1 &186546192
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,7 +494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a390c2fc516384526adab6922f640b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowType: 0
+  spriteRenderer: {fileID: 0}
 --- !u!1001 &194363184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1657,7 +1657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a390c2fc516384526adab6922f640b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowType: 0
+  spriteRenderer: {fileID: 0}
 --- !u!1 &1180155627
 GameObject:
   m_ObjectHideFlags: 0
@@ -2398,8 +2398,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1720414822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14, y: -0.82, z: 0}
-  m_LocalScale: {x: 0.2921493, y: 0.2921493, z: 0.44946048}
+  m_LocalPosition: {x: 0.0164, y: -0.8721, z: 0}
+  m_LocalScale: {x: 0.2768699, y: 0.2870659, z: 0.44946048}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
