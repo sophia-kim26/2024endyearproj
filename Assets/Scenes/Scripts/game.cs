@@ -235,9 +235,8 @@ public class game : MonoBehaviour
         addLeft(-274);
         addDown(-274f);
         addUp(-274f);
-        addRight(-274f);
+        addRight(-274f); 
 
-        Debug.Log("# of left arrows:" + lefts.Count);
         endSuccess();
     }
 
@@ -279,13 +278,15 @@ public class game : MonoBehaviour
         }
         Debug.Log("past health: " + pastHealth);
         Debug.Log("new health: " + health);
-        int changes = (health / 10) - (pastHealth - 10);
+        int changes = (health / 10) - (pastHealth / 10);
         for (int i = 0; i < Math.Abs(changes); i++) {
             if (changes < 0) {
                 healthIndex--;
+                if (healthIndex < 10) healthIndex = 0;
             }
             else {
                 healthIndex++;
+                if (healthIndex > 10) healthIndex = 10;
             }
             healthImage.GetComponent<Image>().sprite = healthSprites[healthIndex];
             Debug.Log("new health index: " + healthIndex);
@@ -379,7 +380,7 @@ public class game : MonoBehaviour
 
             if (targetArrow != null) {
                 // if they missed any arrows
-                if (leftHits.Count+1 <  targetArrowIndex) {
+                if (leftHits.Count + 1 < targetArrowIndex) {
                     for (int i = leftHits.Count+1; i <  targetArrowIndex; i++) {
                         leftHits.Add("missed");
                         ifMiss();
