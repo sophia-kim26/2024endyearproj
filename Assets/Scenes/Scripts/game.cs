@@ -12,8 +12,12 @@ public class game : MonoBehaviour
     public GameObject downArrow;
     public GameObject upArrow;
     public GameObject rightArrow;
+    public GameObject miss;
+    public GameObject perfect;
+    public GameObject good;
     public bool gameOver = false;
     public int health = 100;
+    public int score = 0;
     public List<GameObject> lefts = new List<GameObject>();
     public List<string> leftHits = new List<string>();
     public List<GameObject> downs = new List<GameObject>();
@@ -217,6 +221,10 @@ public class game : MonoBehaviour
         rights.Add(newRight);
     }
 
+    void addMiss() {
+        GameObject newMiss = Instantiate(miss, new Vector3(10.0f, 20.0f, 0), Quaternion.identity);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -259,7 +267,9 @@ public class game : MonoBehaviour
                 if (leftHits.Count+1 <  targetArrowIndex) {
                     for (int i = leftHits.Count+1; i <  targetArrowIndex; i++) {
                         leftHits.Add("missed");
+                        Debug.Log($"Missed");
                         health -= 10;
+                        addMiss();
                     }
                 }
 
@@ -272,6 +282,7 @@ public class game : MonoBehaviour
                     Destroy(targetArrow);
                     screenFlash.Flash();
                     health += 5;
+                    score += 20;
                 }
 
                 // good!
@@ -280,6 +291,7 @@ public class game : MonoBehaviour
                     leftHits.Add("good");
                     Destroy(targetArrow);
                     screenFlash.Flash();
+                    score += 10;
                 }
 
                 lefts[targetArrowIndex] = null;
@@ -338,6 +350,7 @@ public class game : MonoBehaviour
                     Destroy(targetArrow);
                     screenFlash.Flash();
                     health += 5;
+                    score += 20;
                 }
 
                 // good!
@@ -345,6 +358,7 @@ public class game : MonoBehaviour
                     downHits.Add("good");
                     Destroy(targetArrow);
                     screenFlash.Flash();
+                    score += 10;
                 }
 
                 downs[targetArrowIndex] = null;
@@ -403,6 +417,7 @@ public class game : MonoBehaviour
                     Destroy(targetArrow);
                     screenFlash.Flash();
                     health += 5;
+                    score += 20;
                 }
 
                 // good!
@@ -410,6 +425,7 @@ public class game : MonoBehaviour
                     upHits.Add("good");
                     Destroy(targetArrow);
                     screenFlash.Flash();
+                    score += 10;
                 }
 
                 ups[targetArrowIndex] = null;
@@ -468,6 +484,7 @@ public class game : MonoBehaviour
                     Destroy(targetArrow);
                     screenFlash.Flash();
                     health += 5;
+                    score += 20;
                 }
 
                 // good!
@@ -475,6 +492,7 @@ public class game : MonoBehaviour
                     rightHits.Add("good");
                     Destroy(targetArrow);
                     screenFlash.Flash();
+                    score += 10;
                 }
 
                 rights[targetArrowIndex] = null;
