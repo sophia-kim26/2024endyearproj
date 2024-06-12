@@ -375,9 +375,8 @@ public class game : MonoBehaviour
             // so now we have our lil target arrow
 
             if (targetArrow != null) {
-                Debug.Log("in if for miss");
                 // if they missed any arrows
-                if (leftHits.Count+1 <  targetArrowIndex) {
+                if (leftHits.Count + 1 < targetArrowIndex) {
                     for (int i = leftHits.Count+1; i <  targetArrowIndex; i++) {
                         leftHits.Add("missed");
                         ifMiss();
