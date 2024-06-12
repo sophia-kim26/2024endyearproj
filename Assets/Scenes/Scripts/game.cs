@@ -221,7 +221,7 @@ public class game : MonoBehaviour
     void Update()
     {
         if (health <= 0){
-            gameOver == true;
+            gameOver = true;
         }
         if(gameOver == true){
             SceneManager.LoadScene("end");
