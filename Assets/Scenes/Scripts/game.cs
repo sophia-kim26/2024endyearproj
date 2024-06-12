@@ -643,7 +643,7 @@ public class game : MonoBehaviour
                 {
                     upHits.Add("good");
                     Destroy(targetArrowUp);
-                    screenFlash.Flash();
+                    // screenFlash.Flash();
                     ifGood();
                     // screenFlash.Flash();
                     //addGood();
@@ -725,7 +725,7 @@ public class game : MonoBehaviour
                 {
                     rightHits.Add("good");
                     Destroy(targetArrowRight);
-                    screenFlash.Flash();
+                    // screenFlash.Flash();
                     ifGood();
                     // screenFlash.Flash();
                     //addGood();
