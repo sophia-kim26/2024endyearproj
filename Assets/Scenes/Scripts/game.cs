@@ -20,7 +20,7 @@ public class game : MonoBehaviour
 
     public bool gameOver = false;
     public double health = 100;
-    public int score = 0;
+    public double score = 0;
     public List<GameObject> lefts = new List<GameObject>();
     public List<string> leftHits = new List<string>();
     public List<GameObject> downs = new List<GameObject>();
@@ -247,14 +247,14 @@ public class game : MonoBehaviour
     private IEnumerator EndSuccessCoroutine()
     {
         yield return new WaitForSeconds(42);
-        endscript.setEndScore(score);
+        endscript.setEndScore((int)score);
         SceneManager.LoadScene("endSuccess");
     }
-    private async void endFail()
-    {
-        endscript.setEndScore(score);
-        SceneManager.LoadScene("endFail");
-    }
+    // private async void endFail()
+    // {
+    //     endscript.setEndScore(score);
+    //     SceneManager.LoadScene("endFail");
+    // }
 
     private async void displayPerfect()
     {
@@ -296,15 +296,15 @@ public class game : MonoBehaviour
     void ifPerfect()
     {
         // changed this for testing purposes for now
-        changeScore(2);
-        changeHealth(2);
+        changeScore(1.5);
+        changeHealth(1.5);
         Debug.Log("Perfect");
         displayPerfect();
     }
 
     void ifGood()
     {
-        changeScore(1);
+        changeScore(0.5);
         Debug.Log("Good");
         displayGood();
     }
@@ -351,7 +351,7 @@ public class game : MonoBehaviour
         }
     }
 
-    void changeScore(int points)
+    void changeScore(double points)
     {
         Debug.Log("in changeScore");
         double pastScore = score; // 0
@@ -432,10 +432,10 @@ public class game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
-        {
-            endFail();
-        }
+        // if (health <= 0)
+        // {
+        //     endFail();
+        // }
 
         CheckMissedArrows(lefts, leftHits);
         CheckMissedArrows(downs, downHits);
