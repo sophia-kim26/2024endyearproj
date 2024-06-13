@@ -70,6 +70,8 @@ public class game : MonoBehaviour
     int scoreIndex = 0;
     int healthIndex = 0;
 
+    public int missCount = 0;
+
     // Start is called before the first frame update    
     void Start()
     {
@@ -244,12 +246,12 @@ public class game : MonoBehaviour
     private async void endSuccess()
     {
         await Task.Delay(42000);
-        endscript.score = Convert.ToInt32(score);
+        //endscript.score = Convert.ToInt32(score);
         SceneManager.LoadScene("endSuccess");
     }
     private async void endFail()
     {
-        endscript.score = Convert.ToInt32(score);
+        //endscript.score = Convert.ToInt32(score);
         SceneManager.LoadScene("endFail");
     }
 
@@ -309,6 +311,10 @@ public class game : MonoBehaviour
     void ifMiss()
     {
         changeHealth(-10);
+        missCount++;
+        if(missCount >= 5){
+            endFail();
+        }
         Debug.Log("Missed");
         displayMiss();
     }
@@ -412,10 +418,10 @@ public class game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
-        {
-            endFail();
-        }
+        // if (health <= 0)
+        // {
+        //     endFail();
+        // }
 
         GameObject targetArrowLeft = null;
         int targetArrowIndexLeft = -1;
