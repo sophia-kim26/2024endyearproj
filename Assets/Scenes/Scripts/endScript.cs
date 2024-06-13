@@ -14,6 +14,7 @@ public class EndScript : MonoBehaviour
     public TextMeshProUGUI scoretext;
 
     void Start(){
+        endscore = PlayerPrefs.GetInt("Score");
         scoretext.text = "SCORE: " + endscore;
     }
     public void setEndScore(int score){

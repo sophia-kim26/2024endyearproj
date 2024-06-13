@@ -30,7 +30,7 @@ public class game : MonoBehaviour
     public List<GameObject> rights = new List<GameObject>();
     public List<string> rightHits = new List<string>();
     public ScreenFlash screenFlash;
-    public EndScript endscript;
+    // public endScript endscript;
 
     // score images
     public Image scoreImage;
@@ -70,10 +70,12 @@ public class game : MonoBehaviour
     int scoreIndex = 0;
     int healthIndex = 0;
 
+    EndScript endscript = FindObjectOfType<EndScript>();
+
     // Start is called before the first frame update    
     void Start()
     {
-        endscript = FindObjectOfType<EndScript>();
+        if (endscript == null) Debug.LogError("endscript is null");
 
         // BUM BUM BUM BUM
         addUp(3.36f - (3.36f - (-14.5f) / 5f * 7f) + 2f);
@@ -247,7 +249,8 @@ public class game : MonoBehaviour
     private IEnumerator EndSuccessCoroutine()
     {
         yield return new WaitForSeconds(42);
-        endscript.setEndScore((int)score);
+        PlayerPrefs.SetInt("Score", (int)score);
+        // endscript.setEndScore((int)score);
         SceneManager.LoadScene("endSuccess");
     }
     // private async void endFail()

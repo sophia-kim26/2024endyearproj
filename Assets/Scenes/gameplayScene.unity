@@ -2546,6 +2546,7 @@ GameObject:
   - component: {fileID: 2136813067}
   - component: {fileID: 2136813068}
   - component: {fileID: 2136813069}
+  - component: {fileID: 2136813070}
   m_Layer: 0
   m_Name: Conductor
   m_TagString: Untagged
@@ -2695,7 +2696,6 @@ MonoBehaviour:
   rights: []
   rightHits: []
   screenFlash: {fileID: 0}
-  endscript: {fileID: 0}
   scoreImage: {fileID: 1520861880}
   scoreSprites:
   - {fileID: 21300000, guid: 1e3b7cb7f67024c6499a5345f9a05c38, type: 3}
@@ -2752,3 +2752,17 @@ MonoBehaviour:
   flashImage: {fileID: 0}
   flashDuration: 0.5
   flashColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &2136813070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136813063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54de91dc3ede9486e87b2f421521a9b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endscore: 0
+  scoretext: {fileID: 0}
