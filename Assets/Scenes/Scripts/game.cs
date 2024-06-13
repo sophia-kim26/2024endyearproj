@@ -328,7 +328,7 @@ public class game : MonoBehaviour
 
     void ifMiss()
     {
-        changeHealth(-10);
+        changeHealth(-5);
         missCount++;
         Debug.Log("Missed");
         displayMiss();
@@ -336,6 +336,7 @@ public class game : MonoBehaviour
 
     void changeHealth(double points)
     {
+        int changes = 0;
         Debug.Log("in changeHealth");
         double pastHealth = health;
         if (100 - health < points)
@@ -352,17 +353,18 @@ public class game : MonoBehaviour
         }
         Debug.Log("past health: " + pastHealth);
         Debug.Log("new health: " + health);
-        int changes = (Convert.ToInt32(health / 10)) - (Convert.ToInt32(pastHealth / 10));        for (int i = 0; i < Math.Abs(changes); i++)
+        changes = (Convert.ToInt32(pastHealth / 10)) - (Convert.ToInt32(health / 10));
+        for (int i = 0; i < Mathf.Abs(changes); i++)
         {
             if (changes < 0)
             {
                 healthIndex--;
-                if (healthIndex < 10) healthIndex = 0;
+                // if (healthIndex < 10) healthIndex = 0;
             }
             else
             {
                 healthIndex++;
-                if (healthIndex > 10) healthIndex = 10;
+                // if (healthIndex > 10) healthIndex = 10;
             }
             healthImage.GetComponent<Image>().sprite = healthSprites[healthIndex];
             Debug.Log("new health index: " + healthIndex);
