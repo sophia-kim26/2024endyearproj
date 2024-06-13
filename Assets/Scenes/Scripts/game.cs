@@ -246,7 +246,7 @@ public class game : MonoBehaviour
 
     private async void endSuccess()
     {
-         StartCoroutine(EndSuccessCoroutine());
+        StartCoroutine(EndSuccessCoroutine());
     }
     private async void endFail()
     {
