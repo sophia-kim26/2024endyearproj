@@ -19,8 +19,8 @@ public class game : MonoBehaviour
     public GameObject good;
 
     public bool gameOver = false;
-    public int health = 100;
-    public int score = 0;
+    public double health = 100;
+    public double score = 0;
     public List<GameObject> lefts = new List<GameObject>();
     public List<string> leftHits = new List<string>();
     public List<GameObject> downs = new List<GameObject>();
@@ -286,30 +286,30 @@ public class game : MonoBehaviour
     void ifPerfect()
     {
         // changed this for testing purposes for now
-        changeScore(3);
-        changeHealth(2);
+        changeScore(1.5);
+        changeHealth(1.5);
         Debug.Log("Perfect");
         displayPerfect();
     }
 
     void ifGood()
     {
-        changeScore(1);
+        changeScore(0.5);
         Debug.Log("Good");
         displayGood();
     }
 
     void ifMiss()
     {
-        changeHealth(-8);
+        changeHealth(-10);
         Debug.Log("Missed");
         displayMiss();
     }
 
-    void changeHealth(int points)
+    void changeHealth(double points)
     {
         Debug.Log("in changeHealth");
-        int pastHealth = health;
+        double pastHealth = health;
         if (100 - health < points)
         {
             health = 100;
@@ -324,8 +324,7 @@ public class game : MonoBehaviour
         }
         Debug.Log("past health: " + pastHealth);
         Debug.Log("new health: " + health);
-        int changes = (health / 10) - (pastHealth / 10);
-        for (int i = 0; i < Math.Abs(changes); i++)
+        int changes = (Convert.ToInt32(health / 10)) - (Convert.ToInt32(pastHealth / 10));        for (int i = 0; i < Math.Abs(changes); i++)
         {
             if (changes < 0)
             {
@@ -342,10 +341,10 @@ public class game : MonoBehaviour
         }
     }
 
-    void changeScore(int points)
+    void changeScore(double points)
     {
         Debug.Log("in changeScore");
-        int pastScore = score; // 0
+        double pastScore = score; // 0
         if (100 - score < points)
         {
             score = 100;
@@ -354,7 +353,7 @@ public class game : MonoBehaviour
         {
             score += points; // 15
         }
-        int changes = (score / 10) - (pastScore / 10); // 1 - 0 == 1
+        int changes = (Convert.ToInt32(score / 10)) - (Convert.ToInt32(pastScore / 10)); // 1 - 0 == 1
         Debug.Log("past score: " + pastScore);
         Debug.Log("new score: " + score);
         for (int i = 0; i < changes; i++)
