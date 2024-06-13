@@ -246,7 +246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a390c2fc516384526adab6922f640b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
 --- !u!1 &174882021
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +369,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a390c2fc516384526adab6922f640b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
 --- !u!1 &186546192
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,7 +492,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a390c2fc516384526adab6922f640b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
 --- !u!1001 &194363184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1528,7 +1525,7 @@ Transform:
   m_GameObject: {fileID: 963822755}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.07, y: -0.76, z: 0}
-  m_LocalScale: {x: 0.25608, y: 0.25608, z: 0.4656}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4656}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1657,7 +1654,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a390c2fc516384526adab6922f640b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
 --- !u!1 &1180155627
 GameObject:
   m_ObjectHideFlags: 0
@@ -2226,7 +2222,7 @@ Transform:
   m_GameObject: {fileID: 1521878707}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.03, y: -0.74, z: 0}
-  m_LocalScale: {x: 0.25878003, y: 0.25878003, z: 0.4313}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4313}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2399,7 +2395,7 @@ Transform:
   m_GameObject: {fileID: 1720414822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0164, y: -0.8721, z: 0}
-  m_LocalScale: {x: 0.2768699, y: 0.2870659, z: 0.44946048}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.44946048}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2839,28 +2835,28 @@ MonoBehaviour:
   scoreSprites:
   - {fileID: 21300000, guid: 1e3b7cb7f67024c6499a5345f9a05c38, type: 3}
   - {fileID: 21300000, guid: 0f4047e162f5e489781feca1d77268d8, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: a4e69d0b0eda74b1aabb831311b29d06, type: 3}
+  - {fileID: 21300000, guid: bcd0bd31bad0f487fa93634c3049bb50, type: 3}
+  - {fileID: 21300000, guid: 1c3ad2f9c79af4045a547a3ca5a39a46, type: 3}
+  - {fileID: 21300000, guid: 79fb057d705db4bc4b3ee4fb99e56a83, type: 3}
+  - {fileID: 21300000, guid: 984aedf2267a440dfb53fe177e8d33d4, type: 3}
+  - {fileID: 21300000, guid: 3158846d4d5f948f691c3739e4f9711d, type: 3}
+  - {fileID: 21300000, guid: 1c1ffd40119064744aedc2773d987788, type: 3}
+  - {fileID: 21300000, guid: 036e3acc2674545aca31374671156efc, type: 3}
+  - {fileID: 21300000, guid: a4747b28fd20340238ce24bb6e042cce, type: 3}
   healthImage: {fileID: 1641980947}
   healthSprites:
   - {fileID: 21300000, guid: 9e703a99a9a864875be9be333c9e7dc3, type: 3}
   - {fileID: 21300000, guid: 810584d5602244fa185f421c05d0e2ad, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 58e6b33d4a7654d7d88b0f93f06daa30, type: 3}
+  - {fileID: 21300000, guid: 16ff3b67c73674a38aa887b520e72f51, type: 3}
+  - {fileID: 21300000, guid: 550f994ddf7a5448e9f3f613d4018875, type: 3}
+  - {fileID: 21300000, guid: 027bf87dcd43a4e4da6b65e69aa08728, type: 3}
+  - {fileID: 21300000, guid: 6b73f287941e24d89beeb491a590a900, type: 3}
+  - {fileID: 21300000, guid: 2cdc178573aba4d4cbca04bfec69913c, type: 3}
+  - {fileID: 21300000, guid: 3cd5cfc341bc24914b0fbb482850ac55, type: 3}
+  - {fileID: 21300000, guid: 2f51d89dbe30848ed9baa771c9306f94, type: 3}
+  - {fileID: 21300000, guid: 1783213743b1a488aafa65b66bcceb39, type: 3}
 --- !u!114 &2136813068
 MonoBehaviour:
   m_ObjectHideFlags: 0

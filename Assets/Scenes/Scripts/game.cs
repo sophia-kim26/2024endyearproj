@@ -242,7 +242,7 @@ public class game : MonoBehaviour
 
     private async void endSuccess()
     {
-        await Task.Delay(40000);
+        await Task.Delay(42000);
         SceneManager.LoadScene("endSuccess");
     }
 
@@ -286,23 +286,22 @@ public class game : MonoBehaviour
     void ifPerfect()
     {
         // changed this for testing purposes for now
-        changeScore(15);
-        // changeScore(20);
-        changeHealth(5);
+        changeScore(3);
+        changeHealth(2);
         Debug.Log("Perfect");
         displayPerfect();
     }
 
     void ifGood()
     {
-        changeScore(10);
+        changeScore(1);
         Debug.Log("Good");
         displayGood();
     }
 
     void ifMiss()
     {
-        changeHealth(10);
+        changeHealth(-8);
         Debug.Log("Missed");
         displayMiss();
     }
