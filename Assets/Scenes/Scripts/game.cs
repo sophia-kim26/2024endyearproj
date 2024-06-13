@@ -244,16 +244,14 @@ public class game : MonoBehaviour
 
     private async void endSuccess()
     {
-        await Task.Delay(42000);
-        PlayerPrefs.SetInt("Score", (int)score);
-        //endscript.setEndScore(Convert.ToInt32(score));
-        SceneManager.LoadScene("endSuccess");
+         StartCoroutine(EndSuccessCoroutine());
     }
-    // private async void endFail()
-    // {
-    //     //endscript.score = Convert.ToInt32(score);
-    //     SceneManager.LoadScene("endFail");
-    // }
+    private async void endFail()
+    {
+        //endscript.score = Convert.ToInt32(score);
+        PlayerPrefs.SetInt("Score", (int)score);
+        SceneManager.LoadScene("endFail");
+    }
     //     StartCoroutine(EndSuccessCoroutine());
     // }
 
@@ -326,10 +324,10 @@ public class game : MonoBehaviour
     void ifMiss()
     {
         changeHealth(-10);
-        // missCount++;
-        // if(missCount >= 5){
-        //     endFail();
-        // }
+        missCount++;
+        if(missCount >= 5){
+            endFail();
+        }
         Debug.Log("Missed");
         displayMiss();
     }
