@@ -415,7 +415,7 @@ public class game : MonoBehaviour
         {
             if (arrows[i] != null)
             {
-                if (arrows[i].transform.position.y > 5.0f)
+                if (arrows[i].transform.position.y > 5.5f)
                 {
                     hits.Add("missed");
                     ifMiss();
