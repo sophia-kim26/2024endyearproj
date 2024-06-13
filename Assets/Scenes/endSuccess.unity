@@ -854,6 +854,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1352050707}
   - component: {fileID: 1352050708}
+  - component: {fileID: 1352050709}
   m_Layer: 0
   m_Name: Conductor
   m_TagString: Untagged
@@ -891,6 +892,21 @@ MonoBehaviour:
   endscore: 0
   scoretext: {fileID: 1695965010}
   restartButton: {fileID: 964395696}
+--- !u!114 &1352050709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352050706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54de91dc3ede9486e87b2f421521a9b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endscore: 0
+  scoretext: {fileID: 0}
+  restartButton: {fileID: 0}
 --- !u!1 &1372813433
 GameObject:
   m_ObjectHideFlags: 0
