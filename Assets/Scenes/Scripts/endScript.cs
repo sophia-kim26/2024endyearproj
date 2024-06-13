@@ -17,13 +17,13 @@ public class EndScript : MonoBehaviour
     void Start(){
         endscore = PlayerPrefs.GetInt("Score");
         scoretext.text = "SCORE: " + endscore;
-        restartButton.onClick.AddListener(RestartGame);
+        //restartButton.onClick.AddListener(RestartGame);
     }
     public void setEndScore(int score){
         endscore = score;
     }
-    void RestartGame()
-    {
-        SceneManager.LoadScene("selectSong");
-    }
+    // void RestartGame()
+    // {
+    //     SceneManager.LoadScene("selectSong");
+    // }
 }
