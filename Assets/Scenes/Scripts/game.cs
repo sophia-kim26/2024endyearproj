@@ -248,9 +248,8 @@ public class game : MonoBehaviour
     void ifPerfect()
     {
         // changed this for testing purposes for now
-        changeScore(15);
-        // changeScore(20);
-        changeHealth(5);
+        changeScore(3);
+        changeHealth(2);
         Debug.Log("Perfect");
         SpriteRenderer pv = perfect.GetComponent<SpriteRenderer>();
         pv.enabled = true;
@@ -262,7 +261,7 @@ public class game : MonoBehaviour
 
     void ifGood()
     {
-        changeScore(10);
+        changeScore(1);
         Debug.Log("Good");
         SpriteRenderer pv = perfect.GetComponent<SpriteRenderer>();
         pv.enabled = false;
@@ -274,7 +273,7 @@ public class game : MonoBehaviour
 
     void ifMiss()
     {
-        changeHealth(10);
+        changeHealth(-8);
         Debug.Log("Missed");
         SpriteRenderer pv = perfect.GetComponent<SpriteRenderer>();
         pv.enabled = false;
