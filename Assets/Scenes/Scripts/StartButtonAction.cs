@@ -5,6 +5,6 @@ public class StartButtonAction : MonoBehaviour
 {
     public void NextScene()
     {
-        SceneManager.LoadScene("gameplayScene");
+        SceneManager.LoadScene("selectSong");
     }
 }
