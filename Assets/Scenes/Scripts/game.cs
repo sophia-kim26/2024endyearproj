@@ -71,6 +71,8 @@ public class game : MonoBehaviour
     int healthIndex = 0;
 
     public int missCount = 0;
+    public int goodCount = 0;
+    public int perfectCount = 0;
     public EndScript endscript;
 
     // Start is called before the first frame update    
@@ -248,25 +250,26 @@ public class game : MonoBehaviour
     }
     private async void endFail()
     {
-        //endscript.score = Convert.ToInt32(score);
-        PlayerPrefs.SetInt("Score", (int)score);
-        SceneManager.LoadScene("endFail");
+        EndFailCoroutine();
     }
-    //     StartCoroutine(EndSuccessCoroutine());
-    // }
+
 
     private IEnumerator EndSuccessCoroutine()
     {
         yield return new WaitForSeconds(42);
         PlayerPrefs.SetInt("Score", (int)score);
+        //PlayerPrefs.SetInt("Perfect", (int)perfectCount);
         //endscript.setEndScore((int)score);
         SceneManager.LoadScene("endSuccess");
     }
-    // private async void endFail()
-    // {
-    //     endscript.setEndScore(score);
-    //     SceneManager.LoadScene("endFail");
-    // }
+    private IEnumerator EndFailCoroutine()
+    {
+        yield return new WaitForSeconds(42);
+        PlayerPrefs.SetInt("Score", (int)score);
+        //endscript.setEndScore((int)score);
+        SceneManager.LoadScene("endFail");
+    }
+    
 
     private async void displayPerfect()
     {
@@ -310,6 +313,7 @@ public class game : MonoBehaviour
         // changed this for testing purposes for now
         changeScore(1.5);
         changeHealth(1.5);
+        perfectCount++;
         Debug.Log("Perfect");
         displayPerfect();
     }
@@ -317,6 +321,7 @@ public class game : MonoBehaviour
     void ifGood()
     {
         changeScore(0.5);
+        goodCount++;
         Debug.Log("Good");
         displayGood();
     }
@@ -325,9 +330,6 @@ public class game : MonoBehaviour
     {
         changeHealth(-10);
         missCount++;
-        if(missCount >= 5){
-            endFail();
-        }
         Debug.Log("Missed");
         displayMiss();
     }
