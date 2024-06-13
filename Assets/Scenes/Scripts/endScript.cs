@@ -17,6 +17,7 @@ public class EndScript : MonoBehaviour
     void Start(){
         endscore = PlayerPrefs.GetInt("Score");
         scoretext.text = "SCORE: " + endscore;
+        //restartButton.onClick.AddListener(RestartGame);
     }
     // void Update(){
     //     restartButton.onClick.AddListener(RestartGame);
