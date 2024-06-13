@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScreenFlash : MonoBehaviour
 {
@@ -18,11 +19,14 @@ public class ScreenFlash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(FlashRoutine());
     }
 
     public void Flash() 
     {
+        StartCoroutine(FlashRoutine());
+    }
+
+    private IEnumerator FlashRoutine() {
         float elapsedTime = 0f;
 
         flashImage.color = flashColor;

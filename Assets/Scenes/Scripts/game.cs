@@ -244,12 +244,12 @@ public class game : MonoBehaviour
     private async void endSuccess()
     {
         await Task.Delay(42000);
-        endscript.score = Convert.ToInt32(score);
+        endscript.endscore = Convert.ToInt32(score);
         SceneManager.LoadScene("endSuccess");
     }
     private async void endFail()
     {
-        endscript.score = Convert.ToInt32(score);
+        endscript.endscore = Convert.ToInt32(score);
         SceneManager.LoadScene("endFail");
     }
 
@@ -409,6 +409,23 @@ public class game : MonoBehaviour
         GameObject newGood = Instantiate(good, new Vector3(10.0f, 20.0f, 0), Quaternion.identity);
     }
 
+    void CheckMissedArrows(List<GameObject> arrows, List<string> hits)
+    {   
+        for (int i = 0; i < arrows.Count; i++)
+        {
+            if (arrows[i] != null)
+            {
+                if (arrows[i].transform.position.y > 5.0f)
+                {
+                    hits.Add("missed");
+                    ifMiss();
+                    Destroy(arrows[i]);
+                    arrows[i] = null;
+                }
+            }
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -416,6 +433,11 @@ public class game : MonoBehaviour
         {
             endFail();
         }
+
+        CheckMissedArrows(lefts, leftHits);
+        CheckMissedArrows(downs, downHits);
+        CheckMissedArrows(ups, upHits);
+        CheckMissedArrows(rights, rightHits);
 
         GameObject targetArrowLeft = null;
         int targetArrowIndexLeft = -1;
@@ -462,35 +484,35 @@ public class game : MonoBehaviour
             }
             // so now we have our lil target arrow
 
-            for (int i = 0; i < lefts.Count; i++)
-            {
-                if (lefts[i] != null)
-                {
-                    if (lefts[i].transform.position.y > 55f && i > targetArrowIndexLeft)
-                    {
-                        leftHits.Add("miss");
-                        Debug.Log("added miss");
-                        ifMiss();
-                        Destroy(lefts[i]);
-                        lefts[i] = null;
-                    }
-                }
-            }
+            // for (int i = 0; i < lefts.Count; i++)
+            // {
+            //     if (lefts[i] != null)
+            //     {
+            //         if (lefts[i].transform.position.y > 55f && i > targetArrowIndexLeft)
+            //         {
+            //             leftHits.Add("miss");
+            //             Debug.Log("added miss");
+            //             ifMiss();
+            //             Destroy(lefts[i]);
+            //             lefts[i] = null;
+            //         }
+            //     }
+            // }
 
             if (targetArrowLeft != null)
             {
                 // if they missed any arrows
-                if (leftHits.Count + 1 < targetArrowIndexLeft)
-                {
-                    Debug.Log("in if for miss");
-                    for (int i = leftHits.Count + 1; i < targetArrowIndexLeft; i++)
-                    {
-                        leftHits.Add("missed");
-                        ifMiss();
-                        Debug.Log(leftHits[leftHits.Count]);
-                        //addMiss();
-                    }
-                }
+                // if (leftHits.Count + 1 < targetArrowIndexLeft)
+                // {
+                //     Debug.Log("in if for miss");
+                //     for (int i = leftHits.Count + 1; i < targetArrowIndexLeft; i++)
+                //     {
+                //         leftHits.Add("missed");
+                //         ifMiss();
+                //         Debug.Log(leftHits[leftHits.Count-1]);
+                //         //addMiss();
+                //     }
+                // }
 
                 float targetArrowY = targetArrowLeft.transform.position.y;
 
@@ -566,15 +588,15 @@ public class game : MonoBehaviour
             if (targetArrowDown != null)
             {
                 // if they missed any arrows
-                if (downHits.Count + 1 < targetArrowIndexDown)
-                {
-                    for (int i = downHits.Count + 1; i < targetArrowIndexDown; i++)
-                    {
-                        downHits.Add("missed");
-                        ifMiss();
-                        //addMiss();
-                    }
-                }
+                // if (downHits.Count + 1 < targetArrowIndexDown)
+                // {
+                //     for (int i = downHits.Count + 1; i < targetArrowIndexDown; i++)
+                //     {
+                //         downHits.Add("missed");
+                //         ifMiss();
+                //         //addMiss();
+                //     }
+                // }
 
                 float targetArrowY = targetArrowDown.transform.position.y;
 
@@ -648,15 +670,15 @@ public class game : MonoBehaviour
             if (targetArrowUp != null)
             {
                 // if they missed any arrows
-                if (upHits.Count + 1 < targetArrowIndexUp)
-                {
-                    for (int i = upHits.Count + 1; i < targetArrowIndexUp; i++)
-                    {
-                        upHits.Add("missed");
-                        ifMiss();
-                        //addMiss();
-                    }
-                }
+                // if (upHits.Count + 1 < targetArrowIndexUp)
+                // {
+                //     for (int i = upHits.Count + 1; i < targetArrowIndexUp; i++)
+                //     {
+                //         upHits.Add("missed");
+                //         ifMiss();
+                //         //addMiss();
+                //     }
+                // }
 
                 float targetArrowY = targetArrowUp.transform.position.y;
 
@@ -730,15 +752,15 @@ public class game : MonoBehaviour
             if (targetArrowRight != null)
             {
                 // if they missed any arrows
-                if (rightHits.Count + 1 < targetArrowIndexRight)
-                {
-                    for (int i = rightHits.Count + 1; i < targetArrowIndexRight; i++)
-                    {
-                        rightHits.Add("missed");
-                        ifMiss();
-                        //addMiss();
-                    }
-                }
+                // if (rightHits.Count + 1 < targetArrowIndexRight)
+                // {
+                //     for (int i = rightHits.Count + 1; i < targetArrowIndexRight; i++)
+                //     {
+                //         rightHits.Add("missed");
+                //         ifMiss();
+                //         //addMiss();
+                //     }
+                // }
 
                 float targetArrowY = targetArrowRight.transform.position.y;
 
