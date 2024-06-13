@@ -243,6 +243,8 @@ public class game : MonoBehaviour
     private async void endSuccess()
     {
         await Task.Delay(42000);
+        //endScript.score = score;
+        //endScript.updateScore();
         SceneManager.LoadScene("endSuccess");
     }
 
