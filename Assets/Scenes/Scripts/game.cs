@@ -71,7 +71,7 @@ public class game : MonoBehaviour
     int healthIndex = 0;
 
     public int missCount = 0;
-    EndScript endscript = FindObjectOfType<EndScript>();
+    public EndScript endscript;
 
     // Start is called before the first frame update    
     void Start()
@@ -242,12 +242,13 @@ public class game : MonoBehaviour
         endSuccess();
     }
 
-    // private void endSuccess()
-    // {
-    //     await Task.Delay(42000);
-    //     //endscript.score = Convert.ToInt32(score);
-    //     SceneManager.LoadScene("endSuccess");
-    // }
+    private async void endSuccess()
+    {
+        await Task.Delay(42000);
+        PlayerPrefs.SetInt("Score", (int)score);
+        //endscript.setEndScore(Convert.ToInt32(score));
+        SceneManager.LoadScene("endSuccess");
+    }
     // private async void endFail()
     // {
     //     //endscript.score = Convert.ToInt32(score);
@@ -260,7 +261,7 @@ public class game : MonoBehaviour
     {
         yield return new WaitForSeconds(42);
         PlayerPrefs.SetInt("Score", (int)score);
-        // endscript.setEndScore((int)score);
+        //endscript.setEndScore((int)score);
         SceneManager.LoadScene("endSuccess");
     }
     // private async void endFail()
@@ -325,10 +326,10 @@ public class game : MonoBehaviour
     void ifMiss()
     {
         changeHealth(-10);
-        missCount++;
-        if(missCount >= 5){
-            endFail();
-        }
+        // missCount++;
+        // if(missCount >= 5){
+        //     endFail();
+        // }
         Debug.Log("Missed");
         displayMiss();
     }
