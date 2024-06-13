@@ -242,7 +242,7 @@ public class game : MonoBehaviour
 
     private async void endSuccess()
     {
-        await Task.Delay(40000);
+        await Task.Delay(42000);
         SceneManager.LoadScene("endSuccess");
     }
     void ifPerfect()
