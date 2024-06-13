@@ -30,6 +30,7 @@ public class game : MonoBehaviour
     public List<GameObject> rights = new List<GameObject>();
     public List<string> rightHits = new List<string>();
     public ScreenFlash screenFlash;
+    public EndScript endscript;
 
     // score images
     public Image scoreImage;
@@ -243,9 +244,13 @@ public class game : MonoBehaviour
     private async void endSuccess()
     {
         await Task.Delay(42000);
-        //endScript.score = score;
-        //endScript.updateScore();
+        endscript.score = Convert.ToInt32(score);
         SceneManager.LoadScene("endSuccess");
+    }
+    private async void endFail()
+    {
+        endscript.score = Convert.ToInt32(score);
+        SceneManager.LoadScene("endFail");
     }
 
     private async void displayPerfect()
@@ -409,7 +414,7 @@ public class game : MonoBehaviour
     {
         if (health <= 0)
         {
-            SceneManager.LoadScene("endFail");
+            endFail();
         }
 
         GameObject targetArrowLeft = null;

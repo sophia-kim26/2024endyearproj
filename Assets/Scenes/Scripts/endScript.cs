@@ -8,16 +8,15 @@ using UnityEngine.UI;
 using System;
 using TMPro;
 
-public class endScript : MonoBehaviour
+public class EndScript : MonoBehaviour
 {   
-    [SerializeField]
-    //public GameObject ScoreText;
-    public static int score;
-    public static TextMeshProUGUI scoretext; // The TextMeshPro object to display
+    public int endscore = 0;
+    public TextMeshProUGUI scoretext;
 
-    // Update is called once per frame
-    public static void updateScore()
-    {
-        //ScoreText.text = ("SCORE: " + score);
+    void Start(){
+        scoretext.text = "SCORE: " + endscore;
+    }
+    public void getEndScore(int score){
+        endscore = score;
     }
 }
