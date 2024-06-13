@@ -472,7 +472,7 @@ public class game : MonoBehaviour
         int targetArrowIndexUp = -1;
 
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.D))
         {
             Debug.Log("left arrow pressed");
 
@@ -573,7 +573,7 @@ public class game : MonoBehaviour
             // }
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.F))
         {
             Debug.Log("down arrow pressed");
 
@@ -655,7 +655,7 @@ public class game : MonoBehaviour
             // }
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.J))
         {
             Debug.Log("up arrow pressed");
 
@@ -737,7 +737,7 @@ public class game : MonoBehaviour
             // }
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.K))
         {
             Debug.Log("right arrow pressed");
 
