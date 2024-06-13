@@ -311,8 +311,8 @@ public class game : MonoBehaviour
     void ifPerfect()
     {
         // changed this for testing purposes for now
-        changeScore(1.5);
-        changeHealth(1.5);
+        changeScore(1.25);
+        changeHealth(1.25);
         perfectCount++;
         Debug.Log("Perfect");
         displayPerfect();

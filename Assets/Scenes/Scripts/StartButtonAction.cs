@@ -7,4 +7,8 @@ public class StartButtonAction : MonoBehaviour
     {
         SceneManager.LoadScene("selectSong");
     }
+
+    public void restartScene() {
+        SceneManager.LoadScene("selectSong");
+    }
 }
