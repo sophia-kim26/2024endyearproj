@@ -16,7 +16,7 @@ public class EndScript : MonoBehaviour
     void Start(){
         scoretext.text = "SCORE: " + endscore;
     }
-    public void getEndScore(int score){
+    public void setEndScore(int score){
         endscore = score;
     }
 }

@@ -20,7 +20,7 @@ public class game : MonoBehaviour
 
     public bool gameOver = false;
     public double health = 100;
-    public double score = 0;
+    public int score = 0;
     public List<GameObject> lefts = new List<GameObject>();
     public List<string> leftHits = new List<string>();
     public List<GameObject> downs = new List<GameObject>();
@@ -73,9 +73,7 @@ public class game : MonoBehaviour
     // Start is called before the first frame update    
     void Start()
     {
-        Debug.Log("creating arrows");
-
-        // also in theory if we wanted to increase speed we could they would all just look like scary equations like the ones in the beginning
+        endscript = FindObjectOfType<EndScript>();
 
         // BUM BUM BUM BUM
         addUp(3.36f - (3.36f - (-14.5f) / 5f * 7f) + 2f);
@@ -241,15 +239,20 @@ public class game : MonoBehaviour
         endSuccess();
     }
 
-    private async void endSuccess()
+    private void endSuccess()
     {
-        await Task.Delay(42000);
-        endscript.endscore = Convert.ToInt32(score);
+        StartCoroutine(EndSuccessCoroutine());
+    }
+
+    private IEnumerator EndSuccessCoroutine()
+    {
+        yield return new WaitForSeconds(42);
+        endscript.setEndScore(score);
         SceneManager.LoadScene("endSuccess");
     }
     private async void endFail()
     {
-        endscript.endscore = Convert.ToInt32(score);
+        endscript.setEndScore(score);
         SceneManager.LoadScene("endFail");
     }
 
@@ -293,15 +296,15 @@ public class game : MonoBehaviour
     void ifPerfect()
     {
         // changed this for testing purposes for now
-        changeScore(1.5);
-        changeHealth(1.5);
+        changeScore(2);
+        changeHealth(2);
         Debug.Log("Perfect");
         displayPerfect();
     }
 
     void ifGood()
     {
-        changeScore(0.5);
+        changeScore(1);
         Debug.Log("Good");
         displayGood();
     }
@@ -348,7 +351,7 @@ public class game : MonoBehaviour
         }
     }
 
-    void changeScore(double points)
+    void changeScore(int points)
     {
         Debug.Log("in changeScore");
         double pastScore = score; // 0
