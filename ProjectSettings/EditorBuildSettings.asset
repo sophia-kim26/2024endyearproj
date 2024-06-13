@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/endSuccess.unity
     guid: 62ef2035f2bf4451bbd025041ce1b442
+  - enabled: 1
+    path: Assets/Scenes/selectSong.unity
+    guid: b319afc4a76114655ae1204a27dcdfbb
   m_configObjects: {}

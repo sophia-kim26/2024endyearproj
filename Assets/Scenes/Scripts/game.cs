@@ -420,6 +420,7 @@ public class game : MonoBehaviour
         GameObject targetArrowUp = null;
         int targetArrowIndexUp = -1;
 
+
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             Debug.Log("left arrow pressed");
