@@ -245,6 +245,44 @@ public class game : MonoBehaviour
         await Task.Delay(40000);
         SceneManager.LoadScene("endSuccess");
     }
+
+    private async void displayPerfect()
+    {
+        SpriteRenderer pv = perfect.GetComponent<SpriteRenderer>();
+        pv.enabled = true;
+        SpriteRenderer gv = good.GetComponent<SpriteRenderer>();
+        gv.enabled = false;
+        SpriteRenderer mv = miss.GetComponent<SpriteRenderer>();
+        mv.enabled = false;
+        await Task.Delay(1000);
+        pv = perfect.GetComponent<SpriteRenderer>();
+        pv.enabled = false;
+    }
+    private async void displayGood()
+    {
+        SpriteRenderer pv = perfect.GetComponent<SpriteRenderer>();
+        pv.enabled = false;
+        SpriteRenderer gv = good.GetComponent<SpriteRenderer>();
+        gv.enabled = true;
+        SpriteRenderer mv = miss.GetComponent<SpriteRenderer>();
+        mv.enabled = false;
+        await Task.Delay(1000);
+        gv = good.GetComponent<SpriteRenderer>();
+        gv.enabled = false;
+    }
+    private async void displayMiss()
+    {
+        SpriteRenderer pv = perfect.GetComponent<SpriteRenderer>();
+        pv.enabled = false;
+        SpriteRenderer gv = good.GetComponent<SpriteRenderer>();
+        gv.enabled = false;
+        SpriteRenderer mv = miss.GetComponent<SpriteRenderer>();
+        mv.enabled = true;
+        await Task.Delay(1000);
+        mv = miss.GetComponent<SpriteRenderer>();
+        mv.enabled = false;
+    }
+
     void ifPerfect()
     {
         // changed this for testing purposes for now
@@ -252,36 +290,21 @@ public class game : MonoBehaviour
         // changeScore(20);
         changeHealth(5);
         Debug.Log("Perfect");
-        SpriteRenderer pv = perfect.GetComponent<SpriteRenderer>();
-        pv.enabled = true;
-        SpriteRenderer gv = good.GetComponent<SpriteRenderer>();
-        gv.enabled = false;
-        SpriteRenderer mv = miss.GetComponent<SpriteRenderer>();
-        mv.enabled = false;
+        displayPerfect();
     }
 
     void ifGood()
     {
         changeScore(10);
         Debug.Log("Good");
-        SpriteRenderer pv = perfect.GetComponent<SpriteRenderer>();
-        pv.enabled = false;
-        SpriteRenderer gv = good.GetComponent<SpriteRenderer>();
-        gv.enabled = true;
-        SpriteRenderer mv = miss.GetComponent<SpriteRenderer>();
-        mv.enabled = false;
+        displayGood();
     }
 
     void ifMiss()
     {
         changeHealth(10);
         Debug.Log("Missed");
-        SpriteRenderer pv = perfect.GetComponent<SpriteRenderer>();
-        pv.enabled = false;
-        SpriteRenderer gv = good.GetComponent<SpriteRenderer>();
-        gv.enabled = false;
-        SpriteRenderer mv = miss.GetComponent<SpriteRenderer>();
-        mv.enabled = true;
+        displayMiss();
     }
 
     void changeHealth(int points)
@@ -433,9 +456,12 @@ public class game : MonoBehaviour
             }
             // so now we have our lil target arrow
 
-            for (int i = 0; i < lefts.Count; i++) {
-                if (lefts[i] != null) {
-                    if (lefts[i].transform.position.y > 55f && i > targetArrowIndexLeft) {
+            for (int i = 0; i < lefts.Count; i++)
+            {
+                if (lefts[i] != null)
+                {
+                    if (lefts[i].transform.position.y > 55f && i > targetArrowIndexLeft)
+                    {
                         leftHits.Add("miss");
                         Debug.Log("added miss");
                         ifMiss();
